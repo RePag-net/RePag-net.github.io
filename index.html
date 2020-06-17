@@ -7,55 +7,114 @@
   <meta name="keywords" content="RePag, Softwareentwicklung, RePag-Software, RePag-Bibliotheken, RePag-Libraries">
   <title>RePag - Hompage</title>
 
-  <style>
-    header {
-      background-color: #6cb252;
-      height: 4.2em;
-      width: 50em;
-    }
-
-    nav {
-      background-color: #6495ed;
-      height: 53em;
-      width: 9em;
-      float: left;
-    }
-
-    section {
-      /*background-color: gainsboro;*/
-      width: 40em;
-      margin-left: 9em;
-      margin-top: 15em;
-      padding-left: 0.5em;
-    }
-
-    Text {
-      font-size: 1em;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-  </style>
+  <link href="Style.css" rel="stylesheet">
 
 </head>
 <body>
   <header>
     <IMG width="145" height="65" src="Logo.gif" alt="Logo" title="RePag">
+    <Banner>comming soon Open Air</Banner>
   </header>
 
-  <nav> </nav>
+  <nav>
+    <div id="Navi">
+      <ul>
+        <li><a href="https://repag.net/Libraries.html" class="Navi_Knopf">Bibliotheken</a></li>
+        <!--<li><a href="https://repag.net/Test" class="Navi_Knopf">Test</a></li>-->
+      </ul>
+      
+    </div>
+  </nav>
 
   <section>
-    <Text>Nach mehr als drei Jahrzehnten, vom Commondore C64 über die EDV bis zur IT, geht nun diese Epoche</Text>
-    <Text>meines Lebens zu Ende. Es heißt, wenn es am Schönsten ist, sollte man gehe. Aber jedes Ende ist auch ein</Text>
-    <Text>neuer Anfang. So besinn ich mich auf etwas zurück, was es in meinem Leben vor dem Computerzeitalter gab.</Text>
-    <Text>Die Auseinandersetzung zu Themen der Philosophie und Religion. Von daher; auf ein neues Altes.</Text>
-
-    <p>
-      <Text>Ok Ok, never say never again.</Text>
-    </p>
-    <p>
-      <Text>...demnächst also an dieser Stelle Open-Source-Code.</Text>
-    </p>
-
+    <Text_n>Die an dieser Stelle veröffentlichen proprietären Bibliotheken können frei verwendet werden wobei ich keine Haftung für die Nutzung der Dateien übernehme.</Text_n>
+    <Text_n>Alle Dateien verfügen über meine Digitale Signatur und einem Zeitstempel der Veröffentlichung.</Text_n>
+    <P>
+      <Text_n>Zusätzlich werden einige Quelltexte, gemäß dem Open-Source-Prinzip veröffentlicht, soweit die Offenlegung nicht die Sicherheitsstruktur gefährdet.</Text_n>
+      <Text_n>Dazu gehören unter anderem das Programm Core und die Bibliothek CompSys.dll. Es ist mir aber möglich Teile aus diesen Dateien zu veröffentlichen.</Text_n>
+      <Text_n>Zum Beispiel das Memorymanagement und die Cryptho-Algorythmen.</Text_n>
+      <Text_n>Weiteres dazu unter <a href="https://repag.net/Libraries.html">Bibliotheken</a>.</Text_n>
+    </P>
+    <P>
+      <Text_n>Da der Quellcode bisher von mir alleine entwickelt wurde und nicht für eine Veröffentlichung vorgesehen war, enthält er keine Kommentare.</Text_n>
+      <Text_n>Zielsetzung ist es sehr schnelle Funktionen zu entwickeln. Daher ist meine Art der Softwareentwicklung sehr speicherorientiert und entspricht nicht dem neuesten Standart wie z.B. C++ 17.</Text_n>
+      <Text_n>Es werden daher nur die Standartdatentypen und Arrays verwendet. Die Abstract-Data-Types in der ADT.dll sind vollständig in Assembler geschrieben. Mir ist bewusst das damit die Portierbarkeit erschwert wird.</Text_n>
+      <Text_n>Aktuell bedeutet das für die Portierung aller Programme und Bibliotheken nach 64bit, das alle manuell geschreiben Assemblerfunktionen von x86 nach x64 auch von Hand neu geschrieben werden müssen.</Text_n>
+    </P>
+    <P>
+      <Text_n>Die Voraussetzung für den Betrieb der Dateien ist ein Prozessor der mindestens die AVX und</Text_n>
+      <Text_n>AES-Instructions beherrscht. Es werden auch nur Instructions verwendet die bei</Text_n>
+      <Text_n>
+        <A href="https://software.intel.com/en-us/articles/intel-sdm"> Intel</A>
+        <b>und</b>
+        <A href="http://www.amd.com/en/support/tech-docs"> AMD</A>
+        Prozessoren vorhanden sind.
+      </Text_n>
+    </P>
+    <P>
+      <Text_n>Folgende Dokumentationen werden für die Entwicklung und Orientierung der gemeinsamen Instructions verwendet.</Text_n>
+    </P>
+    <P>
+      <ul>
+        <li>
+          <Text_n>Intel 64 and IA32 Architectures Software Developer´s Manual Volume 1</Text_n><br>
+          <Text_n>Reference 253665-067US Mai 2018</Text_n>
+        </li>
+        <li>
+          <Text_n>Intel 64 and IA32 Architectures Software Developer´s Manual Volume 2 (2A, 2B, 2C &amp; 2D)</Text_n><br>
+          <Text_n>Reference 325383-067US Mai 2018</Text_n>
+        </li>
+        <li>
+          <Text_n>Intel 64 and IA32 Architectures Software Developer´s Manual Volume 3 (3A, 3B, 3C &amp; 3D)</Text_n><br>
+          <Text_n>Reference 325384-067US Mai 2018</Text_n>
+        </li>
+        <li>
+          <Text_n>Intel 64 and IA32 Architectures Optimization Reference Manual - auch für AMD</Text_n><br>
+          <Text_n>Reference 248966-040 April 2018</Text_n>
+        </li>
+        <li>
+          <Text_n>Intel Advanced Encryption Standard (AES) New Instrutcion Set - auch für AMD</Text_n><br>
+          <Text_n>Reference 323641-001 Revision 3.01 September 2012</Text_n>
+        </li>
+      </ul>
+    </P>
+    <P>
+      <ul>
+        <li>
+          <Text_n>AMD64 Architecture Programmer´s Manual Volume 1:</Text_n><br>
+          <Text_n>Application Programming Publication 24592 Revision 3.22 December 2017</Text_n>
+        </li>
+        <li>
+          <Text_n>AMD64 Architecture Programmer´s Manual Volume 2:</Text_n><br>
+          <Text_n>System Programming Publication 24593 Revision 3.30 September 2018</Text_n>
+        </li>
+        <li>
+          <Text_n>AMD64 Architecture Programmer´s Manual Volume 3:</Text_n><br>
+          <Text_n>General-Purpose and System Instructions Publication 24594 Revision 3.26 May 2018</Text_n>
+        </li>
+        <li>
+          <Text_n>AMD64 Architecture Programmer´s Manual Volume 4:</Text_n><br>
+          <Text_n>128-Bit and 256-Bit Media Instructions Publication 26568 Revision 3.22 May 2018</Text_n>
+        </li>
+        <li>
+          <Text_n>AMD64 Architecture Programmer´s Manual Volume 5:</Text_n><br>
+          <Text_n>64-Bit Media and x87 Floating-Point Instructions Publication 26569 Revision 3.15 May 2018</Text_n>
+        </li>
+      </ul>
+    </P>
+    <P>
+      <Text_n>Das Programm Core dient dem Prozessmanagement. Die Installation und Ausführung ist für die</Text_n>
+      <Text_n>Verwendung der anderen Dateien notwendig. Das Programm selbst ist vollständig unabhängig und</Text_n>
+      <Text_n>bedarf keiner weiteren Dateien.
+    </P>
+    <P>
+      <Text_n>In Anbetracht der globalen Verwendung meiner Bibliotheken werde ich nun doch zukünftig in Englisch</Text_n>
+      <Text_n>schreiben. Die bestehenden Bibliotheken werden ebenfalls schrittweise ins Englische übertragen.</Text_n>
+    </P>
+    <P>
+      <Text_n>Wer mich in meiner Arbeit unterstützen möchte kann gerne eine Spende in beliebiger Höhe via</Text_n>
+      <Text_n>PayPal senden. E-Mail: development.repag@outlook.com oder <a href="https://PayPal.me/devpreag">https://PayPal.me/devpreag.</a></Text_n>
+    </P>
   </section>
 </body>
 </html>
