@@ -1,0 +1,82 @@
+﻿#Seite {
+  background-color: #808080;
+  margin-top: 0em;
+  margin-left: 0em;
+}  
+
+header {
+    background-color: #6cb252;
+    height: 4.2em;
+    width: 50em;
+  }
+
+  nav {
+    background-color: #6495ed;
+    width: 9em;
+    float: left;
+  }
+
+  section {
+    background-color: white;
+    width: 40em;
+    margin-left: 9em;
+    padding: 0.5em;
+  }
+
+  Banner {
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: yellow;
+    float: right;
+    padding-right: 5em;
+    padding-top: 0.6em;
+  }
+
+  Text_n {
+    font-size: 0.9em;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  #Navi {
+    font-size: 0.95em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20em;
+    float: right;
+    margin-right: 0.6em;
+  }
+
+    #Navi ul {
+      list-style: none;
+    }
+
+    #Navi li {
+      display: block;
+      float: left;
+      background-color: burlywood;
+      border-top: 0.1em solid saddlebrown;
+      border-right: 0.1em solid saddlebrown;
+      border-bottom: 0.05em solid saddlebrown;
+      border-left: 1.2em solid saddlebrown;
+      margin-top: 0.5em;
+      height: 2em;
+      width: 7em;
+    }
+
+      #Navi li:hover {
+        background-color: goldenrod;
+      }
+
+.Navi_Knopf {
+  display: block;
+  text-decoration: none;
+  color: black;
+  height: 1.5em;
+  padding-left: 0.5em;
+  padding-top: 0.5em;
+/*  background-color: grey;*/
+}
+
+  .Navi_Knopf:hover {
+    color: whitesmoke;
+    background-color: goldenrod;
+  }
