@@ -7,7 +7,7 @@
 header {
   background-color: #6cb252;
   height: 4.2em;
-  width: 63.5em;
+  width: 62.5em;
   border-radius: 8px;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -32,7 +32,7 @@ nav {
 
 section {
   background-color: whitesmoke;
-  width: 53em;
+  width: 52em;
   margin-top: 1em;
   margin-left: 9em;
   padding: 0.5em;
@@ -40,9 +40,9 @@ section {
   border: 0.25em solid #fff5c0;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  box-shadow: 1px 1px 10px #fff5c0 inset;
-  -moz-box-shadow: 1px 1px 10px #fff5c0 inset;
-  -webkit-box-shadow: 1px 1px 10px #fff5c0 inset;
+  box-shadow: 1px 1px 20px #fff5c0 inset;
+  -moz-box-shadow: 1px 1px 20px #fff5c0 inset;
+  -webkit-box-shadow: 1px 1px 20px #fff5c0 inset;
 }
 
 Banner {
