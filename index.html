@@ -9,12 +9,6 @@
 
   <link href="style.css" rel="stylesheet">
 
-  <style>
-    nav {
-      height: 72em;
-    }
-  </style>
-
 </head>
 <body id="Seite">
   <header>
@@ -23,11 +17,10 @@
   </header>
 
   <nav>
-    <div id="Navi">
+    <div>
       <ul>
-        <li><a href="https://repag.net/Libraries.html" class="Navi_Knopf">Libraries</a></li>
+        <li><a href="https://repag.net/Libraries.html">Libraries</a></li>
       </ul>
-      
     </div>
   </nav>
 
@@ -42,10 +35,11 @@
         Zielsetzung meiner Art der Softwareentwicklung ist es sehr schnelle Funktionen zu entwickeln.
         Daher ist sie sehr speicherorientiert bzw. hardwarenah und orientiert sich nicht an modernen
         Standarts wie z.B. C++ 17. Es werden daher nur die Standartdatentypen und Arrays verwendet.
-        Die Abstract-Data-Types in der ADT.dll sind vollständig in Assembler geschrieben. Mir ist
-        bewusst das damit die Portierbarkeit erschwert wird. Aktuell bedeutet das für die Portierung
-        aller Projecte nach 64bit, das alle manuell geschreiben Assemblerfunktionen von x86 nach x64
-        auch von Hand neu geschrieben werden müssen.
+        Die Abstract-Data-Types in der ADT.dll sind vollständig in Assembler geschrieben. Die Präfixe
+        vor den Variablennamen sind hilfreich bei der Planung der Registerbreite beim Umschreiben von
+        C-Funktionen nach Assembler. Mir ist bewusst das damit die Portierbarkeit erschwert wird.
+        Aktuell bedeutet das für die Portierung aller Projecte nach 64bit, das alle manuell geschreiben
+        Assemblerfunktionen von x86 nach x64 von Hand neu geschrieben werden müssen.
       </Text_n>
     </p>
     <P>
@@ -58,16 +52,16 @@
     <P>
       <Text_n>
         Zusätzlich werden einige Quelltexte, gemäß dem Open-Source-Prinzip veröffentlicht, soweit die
-        Offenlegung nicht die Sicherheitsstruktur gefährdet. Dazu gehören unter anderem das Project Core
-        und CompSys. Es ist mir aber möglich Teile aus diesen Projecten zu veröffentlichen.
-        Zum Beispiel das Memorymanagement und die Cryptho-Algorythmen.
-        Da der Quellcode bisher von mir alleine entwickelt wurde und nicht für eine Veröffentlichung
-        vorgesehen war, enthält er keine Kommentare.
+        Offenlegung nicht die Sicherheitsstruktur gefährdet. Die Projecte Core und CompSys können daher 
+        nicht offen gelegt werden. Es ist mir aber möglich Teile aus diesen Projecten zu veröffentlichen.
+        Zum Beispiel das Memorymanagement und die Cryptho-Algorythmen. Da der Quellcode bisher von mir
+        alleine entwickelt wurde und nicht für eine Veröffentlichung vorgesehen war,
+        enthält er keine Kommentare.
       </Text_n>
     </P>
     <P>
       <Text_n>
-        Die Voraussetzung für den Betrieb der Dateien ist ein Prozessor der mindestens die AVX und<br>
+        Die Voraussetzung für den Betrieb der Dateien ist ein Prozessor der mindestens die SSE2 und<br>
         AES-Instructions beherrscht. Es werden nur Instructions verwendet die bei
         <A href="https://software.intel.com/en-us/articles/intel-sdm"> Intel</A>
         <b>und</b>
@@ -146,15 +140,9 @@
     <P>
       <Text_n>
         Wer mich in meiner Arbeit unterstützen möchte kann gerne eine Spende in beliebiger Höhe via
-        PayPal senden.
+        PayPal senden <a href="https://PayPal.me/devrepag">https://PayPal.me/devrepag.</a><br>
+        Vielen Dank.
       </Text_n>
-      <ul>
-        <Text_n>
-          <li>E-Mail: development.repag@outlook.com</li>
-          <li>www: <a href="https://PayPal.me/devrepag">https://PayPal.me/devrepag.</a></li>
-        </Text_n>
-      </ul>
-      <Text_n>Vielen Dank.</Text_n>
     </P>
   </section>
 </body>
