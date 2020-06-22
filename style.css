@@ -1,12 +1,13 @@
-﻿#Seite {
+﻿body {
   background-color: #4f4f4f;
   margin-top: 1em;
   margin-left: 1em;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
   background-color: #6cb252;
-  height: 4.2em;
+  height: 4.5em;
   width: 62em;
   border-radius: 8px;
   -moz-border-radius: 8px;
@@ -14,6 +15,36 @@ header {
   box-shadow: 0px 5px 10px white;
   -moz-box-shadow: 0px 5px 10px white;
   -webkit-box-shadow: 0px 5px 10px white;
+  color: darkgrey;
+}
+
+Logo {
+  font-size: 2.6em;
+  font-weight: bold;
+  float: left;
+  padding: 0.25em;
+  text-shadow: 4px 4px 4px white, 4px -4px 4px white, -4px 4px 4px white, -4px -4px 4px white;
+}
+
+Banner {
+  font-size: 2.6em;
+  font-weight: bold;
+  float: left;
+  padding-top: 0.25em;
+  text-shadow: 4px 4px 4px white, 4px -4px 4px white, -4px 4px 4px white, -4px -4px 4px white;
+  width: 16em; /*20em;*/
+  text-align: center;
+}
+
+#Bau {
+  background-color: yellow;
+  color: darkslategrey;
+  font-size: 1em;
+  float: right;
+  margin-right: 1.5em;
+  margin-top: 1.2em;
+  padding: 0.4em;
+  transform: rotate(14deg);
 }
 
 nav {
@@ -30,62 +61,52 @@ nav {
   -webkit-box-shadow: 0px 5px 10px white;
 }
 
-section {
-  background-color: whitesmoke;
-  width: 51.5em;
-  margin-top: 1em;
-  margin-left: 9em;
-  padding: 0.5em;
-  border-radius: 5px;
-  border: 0.25em solid #fff5c0;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  box-shadow: 10px 10px 20px #fff5c0 inset;
-  -moz-box-shadow: 10px 10px 20px #fff5c0 inset;
-  -webkit-box-shadow: 10px 10px 20px #fff5c0 inset;
-}
-
-Banner {
-  font-size: 2em;
-  font-family: Arial, Helvetica, sans-serif;
-  color: gold;
-  float: right;
-  padding-right: 4em;
-  padding-top: 0.6em;
-}
-
-Text_n {
-  font-size: 0.8em;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 nav ul {
   list-style: none;
-  font-family: Arial, Helvetica, sans-serif;
   float: right;
   margin-right: 0.5em;
 }
 
-nav a {
-  display: block;
-  text-decoration: none;
-  color: gold;
-  font-weight: bold;
-  background-color: darkblue;
-  border: 1px solid darkblue;
-  margin-bottom: 0.25em;
-  padding: 0.4em;
-  width: 6em;
-  border-radius: 8px;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  box-shadow: 0px 5px 10px white inset;
-  -moz-box-shadow: 0px 5px 10px white inset;
-  -webkit-box-shadow: 0px 5px 10px white inset;
-}
+  nav a {
+    display: block;
+    text-decoration: none;
+    color: gold;
+    font-weight: bold;
+    background-color: darkblue;
+    border: 1px solid darkblue;
+    margin-bottom: 0.25em;
+    padding: 0.4em;
+    width: 6em;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    box-shadow: 0px 5px 10px white inset;
+    -moz-box-shadow: 0px 5px 10px white inset;
+    -webkit-box-shadow: 0px 5px 10px white inset;
+    transition: all .25s ease-in;
+  }
 
   nav a:focus,
   nav a:hover {
     background-color: gold;
     color: darkblue;
   }
+
+section {
+  background-color: white;
+  width: 50.5em;
+  margin-top: 1em;
+  margin-left: 9em;
+  padding: 1em;
+  border-radius: 5px;
+  border: 0.25em solid #444444;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  box-shadow: 10px 10px 30px #a0a0a0 inset, -10px -10px 30px #a0a0a0 inset;
+  -moz-box-shadow: 10px 10px 30px #a0a0a0 inset, -10px -10px 30px #a0a0a0 inset;
+  -webkit-box-shadow: 10px 10px 30px #a0a0a0 inset, -10px -10px 30px #a0a0a0 inset;
+}
+
+Text_n {
+  font-size: 0.8em;
+}

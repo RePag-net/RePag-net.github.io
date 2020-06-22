@@ -10,10 +10,11 @@
   <link href="style.css" rel="stylesheet">
 
 </head>
-<body id="Seite">
+<body>
   <header>
-    <IMG width="145" height="65" src="Logo.gif" alt="Logo" title="RePag">
-    <Banner>comming soon Open Air - under construction</Banner>
+    <Logo>RePag</Logo>
+    <Banner>Core</Banner>
+    <dev id="Bau">under construction</dev>
   </header>
 
   <nav>
@@ -27,156 +28,131 @@
   </nav>
 
   <section>
-    <Text_n>Core.exe - Prozess Management / Version: 2.0.1.106</Text_n>
-    <P>
-      <Text_n>
+    <Text_n>
+      Das Core-Programm ist ein proprietäres Project. Es stellt ein Prozessmanagement für bis zu achtzehn Prozesse
+      zu Verfügung. Diese Prozesse können sich dann ein gemeinsamen Speicherbereich teilen. Des weiteren stellt der Core
+      ein Schlüsselmanagement für AES256bit-Schlüssel zur Verfügung. Der Quellcode des Programmes Core.exe und
+      die Library CompSys.dll werden aus Sicherheitsgründen nur zum Teil veröffentlicht. So zum Beispiel
+      das <a href="Memory.html">Speichermanagement</a> und die Crypthographie. Die CompSys.dll benötigt noch einige
+      ADTs aus der ADT.dll. Diese zwei Dateien stellen den Mindestumfang eines Prozesses da, der mit dem Core kommuniziert.
+      Alle weiteren hier aufgeführten Libraries werden zusätzlich an dieser Stelle veröffentlicht. Ihr Quellcode
+      wird zu einem späteren Zeitpunkt veröffentlicht.
+      <hr>
+      Core.exe - Prozess Management / Version: 2.0.1.106
+      <P>
         <A href="http://repag.net/Libraries/Core.exe">  EXE-Datei</A>  - Letzte Aktualisierung: 26.04.2019 /
         <A href="http://repag.net/Libraries/CoreSetup.zip">  Core-Installer</A>  - Letzte Aktualisierung: 26.04.2019
-      </Text_n>
-    </P>
-    <hr>
-    <Text_n>CompSys.dll - CPU und OS Funktionen / Version: 2.2.4.106</Text_n>
-    <P>
-      <Text_n>
+      </P>
+      <hr>
+      CompSys.dll - CPU und OS Funktionen / Version: 2.2.4.106
+      <P>
         <A href="http://repag.net/Libraries/CompSys.dll"> DLL-Datei</A>
         <A href="http://repag.net/Libraries/CompSys.lib"> LIB-Datei</A>	- Letzte Aktualisierung: 26.04.2019 /
         <A href="http://repag.net/Libraries/CompSys.h">   H-Datei</A>		- Letzte Änderung: 08.03.2019
-      </Text_n>
-    </P>
-    <hr>
-    <Text_n>ADT.dll - Abstrakte Datentypen / Version: 2.3.4.106</Text_n>
-    <P>
-      <Text_n>
+      </P>
+      <hr>
+      ADT.dll - Abstrakte Datentypen / Version: 2.3.4.106
+      <P>
         <A href="http://repag.net/Libraries/ADT.dll"> DLL-Datei</A>
         <A href="http://repag.net/Libraries/ADT.lib"> LIB-Datei</A>	- Letzte Aktualisierung: 26.04.2019 /
         <A href="http://repag.net/Libraries/ADT.h">   H-Datei</A>		- Letzte Änderung: 26.04.2019
-      </Text_n>
-    </P>
-    <hr>
-    <Text_n>GUL.dll - Grafische 2D und 3D Objekte / Version: 1.2.2.106</Text_n>
-    <P>
-      <Text_n>
+      </P>
+      <hr>
+      GUL.dll - Grafische 2D und 3D Objekte / Version: 1.2.2.106
+      <P>
         <A href="http://repag.net/Libraries/GUL.dll"> DLL-Datei</A>
         <A href="http://repag.net/Libraries/GUL.lib"> LIB-Datei</A>	- Letzte Aktualisierung: 26.04.2019 /
         <A href="http://repag.net/Libraries/GUL.h">   H-Datei</A>		- Letzte Änderung: 17.11.2018
-      </Text_n>
-    </P>
-    <P>
-      <Text_n>
+      </P>
+      <P>
         Hinweis: Grundlage für die Entwicklung ist das "Lehrbuch zur Grafikprogrammierung"
         von Klaus Zeppenfeld erschienen im Spektrum Akademischer Verlag ISBN: 3-8274-1028-2
-      </Text_n>
-    </P>
-      <Text_n>
-        Zum besseren Verständnis der Strukturen STWeltBildKoordinaten und STPerspektivKoordinaten habe
-        ich ein kleines Hilfsprogamm geschrieben.
-      </Text_n>
-    <P>
-      <Text_n>
+      </P>
+      Zum besseren Verständnis der Strukturen STWeltBildKoordinaten und STPerspektivKoordinaten habe
+      ich ein kleines Hilfsprogamm geschrieben.
+      <P>
         <A href="http://repag.net/Libraries/Bau3DObj.zip">  Bau3DObj-Installer</A>	- Letzte Aktualisierung: 26.04.2019
-      </Text_n>
-    </P>
-    <P>
-      <Text_n>Achtung! Eingabewerte, die z.B. zu einer Division durch Null in der Matrix führen, werden nicht</Text_n>
-      <Text_n>abgefangen sondern führen zum Absturz des Programmes.</Text_n>
-    </P>
-    <hr>
-    <Text_n>ProgDlg.dll - Programm und Dialogelemente - Version: 3.2.2.106</Text_n>
-    <P>
-      <Text_n>
+      </P>
+      <P>
+        Achtung! Eingabewerte, die z.B. zu einer Division durch Null in der Matrix führen, werden nicht
+        abgefangen sondern führen zum Absturz des Programmes.
+      </P>
+      <hr>
+      ProgDlg.dll - Programm und Dialogelemente - Version: 3.2.2.106
+      <P>
         <A href="http://repag.net/Libraries/ProgDlg.dll">  DLL-Datei</A>
         <A href="http://repag.net/Libraries/ProgDlg.lib">  LIB-Datei</A>	- Letzte Aktualisierung: 26.04.2019 /
         <A href="http://repag.net/Libraries/ProgDlg.h">    H-Datei</A>    - Letzte Änderung: 17.11.2018
-      </Text_n>
-    </P>
-    <hr>
-    <Text_n>StdElem.dll - Visuelle Standartelemente / Version: 3.2.2.106</Text_n>
-    <P>
-      <Text_n>
+      </P>
+      <hr>
+      StdElem.dll - Visuelle Standartelemente / Version: 3.2.2.106
+      <P>
         <A href="http://repag.net/Libraries/StdElem.dll"> DLL-Datei</A>
         <A href="http://repag.net/Libraries/StdElem.lib"> LIB-Datei</A>	- Letzte Aktualisierung: 26.04.2019 /
         <A href="http://repag.net/Libraries/StdElem.h">   H-Datei</A>		- Letzte Änderung: 17.11.2018
-      </Text_n>
-    </P>
-    <hr>
-    <Text_n>Image.dll - Visuelles Element Bild / Version: 3.2.2.106</Text_n>
-    <P>
-      <Text_n>
+      </P>
+      <hr>
+      Image.dll - Visuelles Element Bild / Version: 3.2.2.106
+      <P>
         <A href="http://repag.net/Libraries/Image.dll">  DLL-Datei</A>
         <A href="http://repag.net/Libraries/Image.lib">  LIB-Datei</A>	- Letzte Aktualisierung: 26.04.2019 /
         <A href="http://repag.net/Libraries/Image.h">    H-Datei</A>		- Letzte Änderung: 17.11.2018
-      </Text_n>
-    </P>
-    <hr>
-    <Text_n>Document.dll - Visuelles Element Dokument / Version: 3.2.2.106</Text_n>
-    <P>
-      <Text_n>
+      </P>
+      <hr>
+      Document.dll - Visuelles Element Dokument / Version: 3.2.2.106
+      <P>
         <A href="http://repag.net/Libraries/Document.dll">  DLL-Datei</A>
         <A href="http://repag.net/Libraries/Document.lib">  LIB-Datei</A>	- Letzte Aktualisierung: 26.04.2019 /
         <A href="http://repag.net/Libraries/Document.h">    H-Datei</A>		- Letzte Änderung: 17.11.2018
-      </Text_n>
-    </P>
-    <hr>
-    <Text_n>Media.dll - Visuelles Element Multimedia / Version: 3.2.2.106</Text_n>
-    <P>
-      <Text_n>
+      </P>
+      <hr>
+      Media.dll - Visuelles Element Multimedia / Version: 3.2.2.106
+      <P>
         <A href="http://repag.net/Libraries/Media.dll"> DLL-Datei</A>
         <A href="http://repag.net/Libraries/Media.lib"> LIB-Datei</A>	- Letzte Aktualisierung: 26.04.2019 /
         <A href="http://repag.net/Libraries/Media.h">   H-Datei</A>		- Letzte Änderung: 17.11.2018
-      </Text_n>
-    </P>
-    <hr>
-    <Text_n>Table - Visuelles Element Tabelle / Version: 3.2.2.106</Text_n>
-    <P>
-      <Text_n>
+      </P>
+      <hr>
+      Table - Visuelles Element Tabelle / Version: 3.2.2.106
+      <P>
         <A href="http://repag.net/Libraries/Table.dll">   DLL-Datei</A>
         <A href="http://repag.net/Libraries/Table.lib">   Lib-Datei</A>	- Letzte Aktualisierung: 26.04.2019 /
         <A href="http://repag.net/Libraries/Table.h">     H-Datei</A>		- Letzte Änderung: 17.11.2018
-      </Text_n>
-    </P>
-    <hr>
-    <Text_n>Print.dll - Druck mit Druckvorschau / Version: 2.1.2.106</Text_n>
-    <P>
-      <Text_n>
+      </P>
+      <hr>
+      Print.dll - Druck mit Druckvorschau / Version: 2.1.2.106
+      <P>
         <A href="http://repag.net/Libraries/Print.dll"> DLL-Datei</A>
         <A href="http://repag.net/Libraries/Print.lib"> LIB-Datei</A>	- Letzte Aktualisierung: 26.04.2019 /
         <A href="http://repag.net/Libraries/Print.h">   H-Datei</A>		- Letzte Änderung: 17.11.2018
-      </Text_n>
-    </P>
-    <hr>
-    <Text_n>User.dll - Spezifische Benutzerdialoge / Version: 1.0.1.106</Text_n>
-    <P>
-      <Text_n>
+      </P>
+      <hr>
+      User.dll - Spezifische Benutzerdialoge / Version: 1.0.1.106
+      <P>
         <A href="http://repag.net/Libraries/User.dll"> DLL-Datei</A>
         <A href="http://repag.net/Libraries/User.lib"> LIB-Datei</A>	- Letzte Aktualisierung: 26.04.2019 /
         <A href="http://repag.net/Libraries/User.h">   H-Datei</A>		- Letzte Änderung: 17.11.2018
-      </Text_n>
-    </P>
-    <hr>
-    <Text_n>Develop.dll - Entwickler Unterstützung / Version: 1.0.1.106</Text_n>
-    <P>
-      <Text_n>
+      </P>
+      <hr>
+      Develop.dll - Entwickler Unterstützung / Version: 1.0.1.106
+      <P>
         <A href="http://repag.net/Libraries/Develop.dll"> DLL-Datei</A>	- Letzte Aktualisierung: 26.04.2019 /
         <A href="http://repag.net/Libraries/Develop.h">   H-Datei</A>		- Letzte Änderung: 08.03.2019
-      </Text_n>
-    </P>
-    <hr>
-    <Text_n>Zusätzliche Dateien</Text_n>
-    <P>
-      <Text_n>
+      </P>
+      <hr>
+      Zusätzliche Dateien
+      <P>
         <A href="http://repag.net/Libraries/Menu.h">		 Menu.h</A>				- Letzte Änderung: 04.10.2018 /
         <A href="http://repag.net/Libraries/Fieldsizes.h">   Fieldsizes.h</A>	- Letzte Änderung: 08.03.2019
-      </Text_n>
-    </P>
-    <hr>
-    <Text_n>Ein kleines Demoprogramm welches den Grundaufbau eines RePag-Programmes zeigt.</Text_n>
-    <P>
-      <Text_n>
+      </P>
+      <hr>
+      Ein kleines Demoprogramm welches den Grundaufbau eines RePag-Programmes zeigt.
+      <P>
         <A href="http://repag.net/Libraries/Demo.zip">      Demo-Installer</A>	- Letzte Aktualisierung: 26.04.2019 /
         <A href="http://repag.net/Libraries/ODLGDemo.cpp">  CPP-Datei</A>
         <A href="http://repag.net/Libraries/ODLGDemo.h">    H-Datei</A>		- Letzte Änderung: 15.12.2018
-      </Text_n>
-    </P>
+      </P>
+    </Text_n>
   </section>
 </body>
 </html>
