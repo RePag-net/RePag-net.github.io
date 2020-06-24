@@ -5,7 +5,7 @@
   <meta name="description" content="RePag-Softwareentwicklung">
   <meta name="author" content="Ren&eacute; Pagel">
   <meta name="keywords" content="RePag, Softwareentwicklung, RePag-Software, RePag-Bibliotheken, RePag-Libraries">
-  <title>RePag - Hompage</title>
+  <title>RePag - Memory</title>
 
   <link href="style.css" rel="stylesheet">
 
@@ -20,69 +20,83 @@
   <nav>
     <div>
       <ul>
-        <li><a href="https://repag.net/index.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Core.html">Core</a></li>
+        <li><a href="GUI.html">GUI</a></li>
       </ul>
     </div>
   </nav>
 
   <section>
     <Text_n>
-      Das Memory-Project ist ein Teil des Speichermanagement was die Basis alle RePag-Programme ist.
-      Es stellt die Speicherblöcke auf dem Heap zur Verfügung. Mit der Funktion
+      Das Memory-Project ist ein Open-Source-Project. Es ist ein Teil des Speichermanagement was die Basis
+      alle RePag-Programme ist. Es stellt die Speicherblöcke auf dem Heap zur Verfügung. Mit der Funktion
       <ul>
         <li>InitVirtualMem(bool bAuslagern)</li>
       </ul>
       könne einzelne unabhängige Speicherbereiche initialisiert werden. Der Parameter bAuslagern gibt
       an ob das Betriebssystem den Speicherbereich in die Auslagerungsdatei auslagern darf. Somit kann
-      mit dem Wert FALSE ein Cache im Arbeitsspeicher aufgebaut werden. <strong>In jedem anderen Falle
-      sollte der Parameter auf TRUE gesetzt werden.</strong>
+      mit dem Wert FALSE ein Cache im Arbeitsspeicher aufgebaut werden. <strong>
+        In jedem anderen Falle sollte der Parameter auf TRUE gesetzt werden.
+      </strong>
+    </Text_n>
       <p>
-        Für das Erstellen von Speicherblöcken im Speicherbereich stehen verschiedene Funktionen zu
-        Verfügung die bestimmen wie die Speicherblöcke im Speicherbereich zur Verfügung gestellt werden.
+        <Text_n>
+          Für das Erstellen von Speicherblöcken im Speicherbereich stehen verschiedene Funktionen zu
+          Verfügung die bestimmen wie die Speicherblöcke im Speicherbereich zur Verfügung gestellt werden.
+        </Text_n>
         <ul>
           <li>
-            VMBlock(unsigned long ulSpeichergrosse)<br>
-            stellt ein Speicherblock im Speicherbereich zu Verfügung und sucht nach dem nächst möglichem
-            Platz im Speicherbereich. Dies führt zu einer geringen Fragmentierung des Speicherbereiches.
+            <Text_n>
+              VMBlock(unsigned long ulSpeichergrosse)<br>
+              stellt ein Speicherblock im Speicherbereich zu Verfügung und sucht nach dem nächst möglichem
+              Platz im Speicherbereich. Dies führt zu einer geringen Fragmentierung des Speicherbereiches.
+            </Text_n>
           </li>
           <li>
-            VMBlockS(unsigned long ulSpeichergrosse)<br />
-            stellt ein Speicherblock im Speicherberich zu Verfügung auf die schnellst Weise am Ende des
-            Speicherbereichs. Dies führt bei exzessivem Gebrauch zu einer starken Fragmentierung des
-            Speicherberiches.
+            <Text_n>
+              VMBlockS(unsigned long ulSpeichergrosse)<br />
+              stellt ein Speicherblock im Speicherberich zu Verfügung auf die schnellst Weise am Ende des
+              Speicherbereichs. Dies führt bei exzessivem Gebrauch zu einer starken Fragmentierung des
+              Speicherberiches.
+            </Text_n>
           </li>
           <li>
-            VMBlockA(unsigned long ulSpeichergrosse, unsigned char ulAlign)<br />
-            stellt ein Speicherblock im Speicherberich zu Verfügung der an einer Speichergrenze ausgerichtet
-            ist. Dies ist z.B. bei einigen Assembler-Instruction notwendig.
+            <Text_n>
+              VMBlockA(unsigned long ulSpeichergrosse, unsigned char ulAlign)<br />
+              stellt ein Speicherblock im Speicherberich zu Verfügung der an einer Speichergrenze ausgerichtet
+              ist. Dies ist z.B. bei einigen Assembler-Instruction notwendig.
+            </Text_n>
           </li>
           <li>
-            VMFrei(void* pvAdresse)<br />
-            git einer Speicherblock im Speicherbereich wieder frei.
+            <Text_n>
+              VMFrei(void* pvAdresse)<br />
+              git einer Speicherblock im Speicherbereich wieder frei.
+            </Text_n>
           </li>
           <li>
-            VMFreiS(void* pvAdresse)<br />
-            gibt einen Speicherblock im Speicherbereich auf die schnellst mögliche Weise wieder frei in dem
-            es den Speicherblock in einer Liste vermerkt. Diese Liste wird bei geringer CPU-Auslastung abgearbeitet.
+            <Text_n>
+              VMFreiS(void* pvAdresse)<br />
+              gibt einen Speicherblock im Speicherbereich auf die schnellst mögliche Weise wieder frei in dem
+              es den Speicherblock in einer Liste vermerkt. Diese Liste wird bei geringer CPU-Auslastung abgearbeitet.
+            </Text_n>
           </li>
         </ul>
-        Alle Funktionen gibt es auch mit zwei Parameter. Dabei ist der erste Parameter der Speicherbereich in dem der
-        Speicherblock zu Verfügung gestellt werden soll. Dies ist der Rückgabewert der Funktion InitVirtualMem(...).
-        Wird dieser nicht angegeben wird immer ein Speicherblock aus dem Standart-Speicherberich zu Verfügung gestellt.
-        <strong>
-          Beim Freigeben von Speicherblöcken ist unbedingt darauf zu achten, dass der richtige Speicherbereich angegeben wird.
-          Andernfalls führt das zu einem merkwürdigen Programmverlauf.
-        </strong>
+        <Text_n>
+          Alle Funktionen gibt es auch mit zwei Parameter. Dabei ist der erste Parameter der Speicherbereich in dem der
+          Speicherblock zu Verfügung gestellt werden soll. Dies ist der Rückgabewert der Funktion InitVirtualMem(...).
+          Wird dieser nicht angegeben wird immer ein Speicherblock aus dem Standart-Speicherberich zu Verfügung gestellt.
+          <strong>Beim Freigeben von Speicherblöcken ist unbedingt darauf zu achten, dass der richtige Speicherbereich angegeben wird.
+          Andernfalls führt das zu einem merkwürdigen Programmverlauf.</strong>
+        </Text_n>
       </p>
-      <p>
+      <Text_n>
         Mit der Funktion
         <ul>
-          <li>FreeVirtualMem(VMEMORY vmMemory)</li>
+            <li>FreeVirtualMem(VMEMORY vmMemory)</li>
         </ul>
         wird der Speicherbereich komplett freigegeben. Der anzugebene Parameter ist der Speicherbereich.
-      </p>
-    </Text_n>
-  </section>
-
+      </Text_n>
+    </section>
   </body>
 </html>
