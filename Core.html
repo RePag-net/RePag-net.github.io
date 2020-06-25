@@ -2,9 +2,9 @@
 <html lang="de">
 <head>
   <meta charset="utf-8" />
-  <meta name="description" content="RePag-Softwareentwicklung">
+  <meta name="description" content="RePag-Softwaredevelopment">
   <meta name="author" content="Ren&eacute; Pagel">
-  <meta name="keywords" content="RePag, Softwareentwicklung, RePag-Software, RePag-Bibliotheken, RePag-Libraries">
+  <meta name="keywords" content="RePag, Softwareentwicklung, Softwaredevelopment, RePag-Software, RePag-Bibliotheken, RePag-Libraries">
   <title>RePag - Core</title>
 
   <link href="style.css" rel="stylesheet">
@@ -22,6 +22,7 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="GUI.html">GUI</a></li>
+        <li><a href="http://repag.net/Memory.html">Memory</a></li>
       </ul>
     </div>
   </nav>
@@ -29,12 +30,15 @@
   <section>
     <Text_n>
       Das Core-Programm ist ein proprietäres Project. Es stellt ein Prozessmanagement für bis zu achtzehn Prozesse
-      zur Verfügung. Beim Start eines Prozesses wird automatisch eine Verbindung zum Core hergestellt.
+      zur Verfügung. Um die Geschlossenheit und Unabhängigkeit zu gewährleisten benötigt der Core keine weiteren Dateien.
+      Die ComSys.dll ist das kommunizierende Gegenstück auf der Seite des jeweiligen Prozesses. Diese Datei
+      benötigt noch einige Teile aus der ADT.DLL. Somit werden diese beiden Dateien auf der Seite des
+      jeweiligen Prozesses benötigt. Beim Start eines Prozesses wird automatisch eine Verbindung zum Core hergestellt.
       Für alle verbundenen Prozesse besteht die Möglichkeit mit der Klasse COVMBlockShared gemeinsam auf den
-      gleichen Speicherbereich zuzugreifen. Des weiteren hat der Core sein eigenes Speichermanagement sowie sein
-      eigenen Certificatestore und ein Schlüsselmanagement für AES256bit-Schlüssel. Der Quellcode des Programmes
+      gleichen Memorybereich zuzugreifen. Des weiteren hat der Core sein eigenes Memorymanagement sowie sein
+      eigenen Certificatestore und ein Keymanagement für AES256bit-Schlüssel. Der Quellcode des Programmes
       Core.exe und die Library CompSys.dll werden aus Sicherheitsgründen nur zum Teil veröffentlicht. So zum Beispiel
-      das <a href="Memory.html">Speichermanagement</a> und die Crypthographie.
+      das <a href="https://repag.net/Memory.html">Memorymanagement</a> und die Crypthographie.
     </Text_n>
     <p>
       <Text_n>
@@ -61,26 +65,26 @@
     </P>
     <P>
       <Text_n>
-        Die Cores kommunizieren untereinander über den Port 5111. Der Verbindungsaufbau zu
-        IPV6-Addressen wird bevorzugt hergestellt und ist mindestens 1000 msek. schneller pro Verbindung.
+        Über den Port 5111 kommunizieren die Cores untereinander. Der Verbindungsaufbau zu IPV6-Addressen
+        wird bevorzugt hergestellt und ist mindestens 1000 msek. schneller pro Verbindung.
         Die Standart Waittime zwischen Core zu Core Verbindungen beträgt 20000 msek. und zwischen
         Prozess zu Core 25000 msek. bevor der Vorgang abgebrochen wird.
       </Text_n>
     <p>
       <Text_n>
-        Der Core muss als Service installiert werden. Zur Installation startet man die Eingabeaufforderung (DOS-Prompt)
-        als Administrator. Wechselt in das Verzeichnis in der sich die Datei Core.exe befindet und gibt
-        core -install ein. Weitere Optionen können durch Eingabe von core -h angezeigt werden.
+        Zur Installation des Cores startet man die Eingabeaufforderung (DOS-Prompt) als Administrator.
+        Wechselt in das Verzeichnis in der sich die Datei Core.exe befindet und gibt core -install ein.
+        Weitere Optionen können durch Eingabe von core -h angezeigt werden.
+      </Text_n>
+    </p>
+    <P>
+      <Text_n>
+
       </Text_n>
     </P>
     <P>
       <Text_n>
-        Das Abstract-Data-Types Project wird ein Open-Source-Project. Alle ADTs sind vollständig in Assembler
-        geschrieben. Die Klassen COComma4 und COComma4_80 sind mit dem SSE2 und x87 FPU Befehlssatz geschrieben.
-      </Text_n>
-    </P>
-    <P>
-      <Text_n>
+        Das Abstract-Data-Types Project wird ein Open-Source-Project.
         Bei den Funktionen FLOATzuCHAR() und DOUBLEzuCHAR() wird nur in der Darstellung gerundet. Der
         interne Wert bleibt unverändert. Bei Angabe von 8-Stellen bei FLOATzuCHAR() und bei der Angabe von
         16-Stellen bei DOUBLEzuCHAR() wird nicht gerundet. Stattdessen wird der echte Wert dargestellt mit
@@ -94,8 +98,9 @@
       <hr>
       Core.exe - Prozess Management / Version: 2.0.1.107
       <P>
-        <A href="http://repag.net/Libraries/Core.exe">  EXE-Datei</A>  - Letzte Aktualisierung: 24.06.2020 <!--/
-        <A href="http://repag.net/Libraries/CoreSetup.zip">  Core-Zip</A>  - Letzte Aktualisierung: 24.06.2020-->
+        <A href="http://repag.net/Libraries/Core.exe">  EXE-Datei</A>  - Letzte Aktualisierung: 24.06.2020
+        <!--/
+      <A href="http://repag.net/Libraries/CoreSetup.zip">  Core-Zip</A>  - Letzte Aktualisierung: 24.06.2020-->
       </P>
       <hr>
       CompSys.dll - CPU und OS Funktionen / Version: 2.2.4.107
