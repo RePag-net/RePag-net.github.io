@@ -14,7 +14,7 @@
   <header>
     <Logo>RePag</Logo>
     <Banner>Memory</Banner>
-    <dev id="Bau">under construction</dev>
+    <!--<dev id="Bau">under construction</dev>-->
   </header>
 
   <nav>
@@ -37,65 +37,69 @@
       </ul>
       könne einzelne unabhängige Memorybereiche initialisiert werden. Der Parameter bAuslagern gibt
       an ob das Betriebssystem den Memorybereich in die Auslagerungsdatei auslagern darf. Somit kann
-      mit dem Wert FALSE ein Cache im Arbeitsspeicher aufgebaut werden. 
+      mit dem Wert FALSE ein Cache im Arbeitsspeicher aufgebaut werden.
       <strong>In jedem anderen Falle sollte der Parameter auf TRUE gesetzt werden.</strong>
     </Text_n>
-      <p>
-        <Text_n>
-          Für das Erstellen von Memoryblöcken im Memorybereich stehen verschiedene Funktionen zu
-          Verfügung die bestimmen wie die Memoryblöcke im Memorybereich zur Verfügung gestellt werden.
-        </Text_n>
-        <ul>
-          <li>
-            <Text_n>
-              VMBlock(VMEMORY vmMemory, unsigned long ulBytes) oder VMBlock(unsigned long ulBytes)<br>
-              stellt ein Memoryblock im angegebenen Memorybereich zu Verfügung und sucht nach dem nächst
-              möglichem Platz im Memorybereich. Dies führt zu einer geringen Fragmentierung des Memorybereiches.
-            </Text_n>
-          </li>
-          <li>
-            <Text_n>
-              VMBlockS(VMEMORY vmMemory, unsigned long ulBytes) oder VMBlockS(unsigned long ulBytes)<br />
-              stellt ein Memoryblock im angegebenen Memorybereich zu Verfügung auf die schnellst Weise
-              am Ende des Memorybereichs. Dies führt bei exzessivem Gebrauch zu einer starken Fragmentierung
-              des Memorybereiches.
-            </Text_n>
-          </li>
-          <li>
-            <Text_n>
-              VMBlockA(VMEMORY vmMemory, unsigned long ulBytes, unsigned char ulAlign) oder VMBlockA(unsigned long ulBytes, unsigned char ulAlign)<br />
-              stellt ein Memoryblock im angegebenen Memorybereich zu Verfügung der an einer Memorygrenze
-              ausgerichtet ist. Dies ist z.B. bei einigen Assembler-Instruction notwendig.
-            </Text_n>
-          </li>
-          <li>
-            <Text_n>
-              VMFrei(VMEMORY vmMemory, void* pvAdresse) oder VMFrei(void* pvAdresse)<br />
-              git einer Memoryblock im angegebenen Memorybereich wieder frei.
-            </Text_n>
-          </li>
-          <li>
-            <Text_n>
-              VMFreiS(VMEMORY vmMemory, void* pvAdresse) oder VMFreiS(void* pvAdresse)<br />
-              gibt einen Memoryblock im angegebenen Memorybereich auf die schnellst mögliche Weise wieder frei in dem
-              es den Memoryblock in einer Liste vermerkt. Diese Liste wird bei geringer CPU-Auslastung abgearbeitet.
-            </Text_n>
-          </li>
-        </ul>
-        <Text_n>
-          Der erste Parameter ist der Memorybereich in dem der Memoryblock zu Verfügung gestellt werden soll. Dies ist
-          der Rückgabewert der Funktion InitVirtualMem(...). In der Variante ohne der Angabe des Memorybereiches wird
-          ein Memoryblock aus dem Standart-Memorybereich zu Verfügung gestellt. Dieser Memorybereich wird beim
-          Start der Library initialisiert.
-        </Text_n>
-      </p>
+    <p>
       <Text_n>
-        Mit der Funktion
-        <ul>
-            <li>FreeVirtualMem(VMEMORY vmMemory)</li>
-        </ul>
-        wird der Memorybereich komplett freigegeben. Spätestens beim Beenden des Programmes sollte diese Funktion ausgeführt werden.
+        Für das Erstellen von Memoryblöcken im Memorybereich stehen verschiedene Funktionen zu
+        Verfügung die bestimmen wie die Memoryblöcke im Memorybereich zur Verfügung gestellt werden.
       </Text_n>
-    </section>
-  </body>
+      <ul>
+        <li>
+          <Text_n>
+            VMBlock(VMEMORY vmMemory, unsigned long ulBytes) oder VMBlock(unsigned long ulBytes)<br>
+            stellt ein Memoryblock im angegebenen Memorybereich zu Verfügung und sucht nach dem nächst
+            möglichem Platz im Memorybereich. Dies führt zu einer geringen Fragmentierung des Memorybereiches.
+          </Text_n>
+        </li>
+        <li>
+          <Text_n>
+            VMBlockS(VMEMORY vmMemory, unsigned long ulBytes) oder VMBlockS(unsigned long ulBytes)<br />
+            stellt ein Memoryblock im angegebenen Memorybereich zu Verfügung auf die schnellst Weise
+            am Ende des Memorybereichs. Dies führt bei exzessivem Gebrauch zu einer starken Fragmentierung
+            des Memorybereiches.
+          </Text_n>
+        </li>
+        <li>
+          <Text_n>
+            VMBlockA(VMEMORY vmMemory, unsigned long ulBytes, unsigned char ulAlign) oder VMBlockA(unsigned long ulBytes, unsigned char ulAlign)<br />
+            stellt ein Memoryblock im angegebenen Memorybereich zu Verfügung der an einer Memorygrenze
+            ausgerichtet ist. Dies ist z.B. bei einigen Assembler-Instruction notwendig.
+          </Text_n>
+        </li>
+        <li>
+          <Text_n>
+            VMFrei(VMEMORY vmMemory, void* pvAdresse) oder VMFrei(void* pvAdresse)<br />
+            git einer Memoryblock im angegebenen Memorybereich wieder frei.
+          </Text_n>
+        </li>
+        <li>
+          <Text_n>
+            VMFreiS(VMEMORY vmMemory, void* pvAdresse) oder VMFreiS(void* pvAdresse)<br />
+            gibt einen Memoryblock im angegebenen Memorybereich auf die schnellst mögliche Weise wieder frei in dem
+            es den Memoryblock in einer Liste vermerkt. Diese Liste wird bei geringer CPU-Auslastung abgearbeitet.
+          </Text_n>
+        </li>
+      </ul>
+      <Text_n>
+        Der erste Parameter ist der Memorybereich in dem der Memoryblock zu Verfügung gestellt werden soll. Dies ist
+        der Rückgabewert der Funktion InitVirtualMem(...). In der Variante ohne der Angabe des Memorybereiches wird
+        ein Memoryblock aus dem Standart-Memorybereich zu Verfügung gestellt. Dieser Memorybereich wird beim
+        Start der Library initialisiert.
+      </Text_n>
+    </p>
+    <Text_n>
+      Mit der Funktion
+      <ul>
+        <li>FreeVirtualMem(VMEMORY vmMemory)</li>
+      </ul>
+      wird der Memorybereich komplett freigegeben. Spätestens beim Beenden des Programmes sollte diese Funktion ausgeführt werden.
+    </Text_n>
+  </section>
+
+  <footer>
+    Last Update: 8. Juli 2020
+  </footer>
+</body>
 </html>
