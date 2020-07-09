@@ -29,12 +29,63 @@
   </nav>
 
   <section>
-
-
+    <Text_n>
+      Das <a href="https://github.com/RePag/Crypto">Cryptography-Project</a> ist ein
+      <a href="https://github.com/RePag/Crypto">Open-Source-Project</a>.
+      Die Verschlüsselung erfolgt nach dem Advanced Encryption Standard (AES). Die Schlüssellänge beträgt
+      256bit. Es kommt zusätzlich die Betriebsart Cipher Block Chaining zur Anwendung.
+    </Text_n>
+    <p>
+      <Text_n>
+        Bei der Verwendung der Funktionen ist zu beachten das die AES Key-Arrays an einer 16bit Speichergrenze
+        ausgerichtet werden müssen. Um Speicher auf dem Stack zu reservieren:
+      </Text_n>
+      <ul>
+        <li>
+          <Text_n>
+            alignas(16) unsigned char auc256DecryptKey[256]; alignas(16) unsigned char auc240EncryptKey[240];
+          </Text_n>
+        </li>
+      </ul>
+      <Text_n>
+        oder um Speicher auf dem Heap anzufordern
+      </Text_n>
+      <ul>
+        <li>
+          <Text_n>
+            VMBLOCK vb256DecryptKey = VMBlockA(256, 16); VMBLOCK vb240EncryptKey = VMBlockA(240, 16);
+          </Text_n>
+        </li>
+      </ul>
+      <Text_n>
+        Wer ganz sicher gehen will sollte am Ende seiner Funktion den Speicher mit Nullen überschreiben.<br>
+          Für den Stack mit
+      </Text_n>
+      <ul>
+        <li>
+          <Text_n>
+            ZeroMem(auc256DecryptKey, 256); ZeroMem(auc240EncryptKey, 240);
+          </Text_n>
+        </li>
+      </ul>
+      <Text_n>
+        oder für den Heap mit
+      </Text_n>
+      <ul>
+      <li>
+        <Text_n>
+          ZeroMem(vb256DecryptKey, 256); ZeroMem(vb240EncryptKey, 240);
+        </Text_n>
+      </li>
+      </ul>
+    </p>
+      <Text_n>
+        Der Vector muss nicht an einer Speichergrenze augerichtet werden.
+      </Text_n>
   </section>
   
   <footer>
-
+    Last Update: 9. Juli 2020
   </footer>
 
 </body>
