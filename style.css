@@ -113,5 +113,42 @@ Text_n {
 
 footer {
   color: whitesmoke;
-  font-size: 0.65em;
+  font-size: 0.6em;
+  height: 10em;
+  width: 103em;
 }
+
+  #Repo ul {
+    list-style: none;
+    line-height: 1.8em;
+    font-size: 1.2em;
+    float: left;
+    margin-left: 11em;
+    width: 8em;
+  }
+
+#Feed ul {
+  list-style: none;
+  line-height: 1.8em;
+  font-size: 1.2em;
+  float: left;
+}
+
+  #Repo a,
+  #Feed a {
+    color: #6495ed;
+  }
+
+  #Repo a:hover,
+  #Repo a:focus,
+  #Feed a:focus,
+  #Feed a:hover {
+    color: gold;
+    transition: all .25s ease-in;
+  }
+
+  #Update {
+    float: right;
+    margin-top: 8em;
+    margin-right: 0.5em;
+  }
