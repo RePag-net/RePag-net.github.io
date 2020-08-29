@@ -32,7 +32,7 @@ Banner {
   float: left;
   padding-top: 0.3em;
   text-shadow: 4px 4px 4px white, 4px -4px 4px white, -4px 4px 4px white, -4px -4px 4px white;
-  width: 16em; /*20em;*/
+  width: 20em; /*16em;*/
   text-align: center;
 }
 
@@ -114,7 +114,7 @@ Text_n {
 footer {
   color: whitesmoke;
   font-size: 0.6em;
-  height: 10em;
+  height: 11em;
   width: 103em;
 }
 
@@ -124,25 +124,36 @@ footer {
     font-size: 1.2em;
     float: left;
     margin-left: 11em;
-    width: 8em;
+    width: 10em;
   }
 
-#Feed ul {
-  list-style: none;
-  line-height: 1.8em;
-  font-size: 1.2em;
-  float: left;
-}
+  #Feed ul {
+    list-style: none;
+    line-height: 1.8em;
+    font-size: 1.2em;
+    float: left;
+    width: 10em;
+  }
+
+  #Install ul {
+    list-style: none;
+    line-height: 1.8em;
+    font-size: 1.2em;
+    float: left;
+  }
 
   #Repo a,
-  #Feed a {
+  #Feed a,
+  #Install a {
     color: #6495ed;
   }
 
   #Repo a:hover,
   #Repo a:focus,
   #Feed a:focus,
-  #Feed a:hover {
+  #Feed a:hover,
+  #Install a:hover,
+  #Install a:focus {
     color: gold;
     transition: all .25s ease-in;
   }
