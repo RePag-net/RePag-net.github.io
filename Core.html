@@ -37,7 +37,7 @@
       jeweiligen Prozesses benötigt. Beim Start eines Prozesses wird automatisch eine Verbindung zum Core hergestellt.
       Für alle verbundenen Prozesse besteht die Möglichkeit mit der Klasse COVMBlockShared gemeinsam auf den
       gleichen Memorybereich zuzugreifen. Des weiteren hat der Core sein eigenes Memorymanagement sowie sein
-      eigenen Certificatestore und ein Keymanagement für AES256bit-Schlüssel. Der Quellcode des Programmes
+      eigenen Certificatestore und ein Keymanagement für AES256bit-Schlüssel. Der Quellcode des Programms
       Core.exe und die Library CompSys.dll werden aus Sicherheitsgründen nur zum Teil veröffentlicht. So zum Beispiel
       das <a href="https://repag.net/Memory.html">Memorymanagement</a>
       und die <a href="Crypto.html">Cryptography</a>.
@@ -53,7 +53,7 @@
       <Text_n>
         Der Core verfügt über eine eigene Databaseseengine. Diese hat ein Wartungsmodul mit zwei Aufgaben.
         Den "Perfekten Ausgleich"(PA) der Binare-Search-Tree(BST) und die Startoptimierung(SO) der
-        Datenbankdateien. Letzters ist vergleichbar mit dem Defragmentieren von Datenträger. Beim Start des
+        Datenbankdateien. Letzteres ist vergleichbar mit dem Defragmentieren von Datenträger. Beim Start des
         Cores durch den Service Manager erfolgt ein parallel Start der DB-Engine der zeitlich länger dauern
         kann. Dies ist nur über den Task Manager nachvollziehbar. Die SO dient nur der Beschleunigung des
         Startes der DB-Engine durch eine für den Start optimierte Anordnung der Daten in den DB-Dateien. Die
@@ -67,16 +67,18 @@
     </P>
     <P>
       <Text_n>
-        Über den Port 5111 kommunizieren die Cores untereinander. Der Verbindungsaufbau zu IPV6-Addressen
+        Über den Port 5111 kommunizieren die Cores untereinander. Der Verbindungsaufbau zu IPV6-Adressen
         wird bevorzugt hergestellt und ist mindestens 1000 msek. schneller pro Verbindung.
-        Die Standart Waittime zwischen Core zu Core Verbindungen beträgt 20000 msek. und zwischen
+        Die Standard Waittime zwischen Core zu Core Verbindungen beträgt 20000 msek. und zwischen
         Prozess zu Core 25000 msek. bevor der Vorgang abgebrochen wird.
       </Text_n>
     <p>
       <Text_n>
         Zur Installation des Cores startet man die Eingabeaufforderung (DOS-Prompt) als Administrator.
         Wechselt in das Verzeichnis in der sich die Datei Core.exe befindet und gibt core -install ein.
-        Weitere Optionen können durch Eingabe von core -h angezeigt werden.
+        Weitere Optionen können durch Eingabe von core -h angezeigt werden. Alternativ kann man komfortabel
+        über den Windows-Installer durch Verwendung der <a href="https://repag.net/Install/RePagCore.msi">RePagCore.msi</a>
+        Datei eine komplette Installation durchführen. Die Windows-Installer Variante ist auch die empfohlene Variante.
       </Text_n>
     </p>
     <P>
@@ -115,19 +117,19 @@
         Install: Core / Version 2.2.0 - Last Update: 30.08.2020
       </P>
       <hr>
-      File: FileVers.dll - Dateiversion Management / Version: 3.1.3.0 - Last Update: 30.08.2020
+      File: FileVers.dll - Dateiversion Management / Version: 3.1.4.0 - Last Update: 02.10.2020
       <P>
-        Package: RePag.FileVersion / Version 3.13.0	- Last Update: 30.08.2020
+        Package: RePag.FileVersion / Version 3.14.0	- Last Update: 02.10.2020
       </P>
       <hr>
       File: CompSys.dll - CPU und OS Funktionen / Version: 2.2.5.0 - Last Update: 30.08.2020
       <P>
-        Package: RePag.System / Version 2.25.0 - Last Update: 30.08.2020
+        Package: RePag.System / Version 2.26.0 - Last Update: 02.10.2020
       </P>
       <hr>
-      File: ADT.dll - Abstrakte Datentypen / Version: 2.3.5.0	- Last Update: 30.08.2020
+      File: ADT.dll - Abstrakte Datentypen / Version: 2.3.6.0	- Last Update: 02.10.2020
       <P>
-        Package: RePag.System / Version 2.25.0 - Last Update: 30.08.2020
+        Package: RePag.System / Version 2.26.0 - Last Update: 02.10.2020
       </P>
     </Text_n>
   </section>
@@ -156,7 +158,7 @@
       </ul>
     </div>
     <div id="Update">
-      Last Update: 18. September 2020
+      Last Update: 2. Oktober 2020
     </div>
   </footer>
 </body>
