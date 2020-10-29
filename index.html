@@ -60,7 +60,9 @@
         vor den Variablennamen sind hilfreich bei der Planung der Registerbreite beim Umschreiben von
         C-Funktionen nach Assembler. Mir ist bewusst das damit die Portierbarkeit erschwert wird.
         Aktuell bedeutet das für die Portierung aller Projekte nach 64bit, das alle manuell geschrieben
-        Assemblerfunktionen von x86 nach x64 von Hand neu geschrieben werden müssen.
+        Assemblerfunktionen von x86 nach x64 von Hand neu geschrieben werden müssen. Nach der vollständigen
+        Portierung auf 64bit wird die Entwicklung von 32bit Funktionen eingestellt. Es wird aber weiterhin
+        Patchs für 32bit Funktionen geben.
       </Text_n>
     </p>
     <P>
@@ -85,8 +87,9 @@
     </P>
     <P>
       <Text_n>
-        Die Voraussetzung für den Betrieb der Dateien ist ein Prozessor der mindestens die SSE2 und
-        AES-Instructions beherrscht. Es werden nur Instructions verwendet die bei
+        Die Voraussetzung für den Betrieb der 32bit-Dateien ist ein Prozessor der mindestens die SSE2 und
+        AES-Instructions beherrscht. Für den zukünftigen Betrieb der 64bit-Dateien ist ein Prozessor notwendig
+        der mindestens AVX2-Instructions beherrscht. Es werden nur Instructions verwendet die bei
         <A href="https://software.intel.com/en-us/articles/intel-sdm"> Intel</A>
         <b>und</b>
         <A href="https://www.amd.com/en/support/tech-docs"> AMD</A>
@@ -201,7 +204,7 @@
       </ul>
     </div>
     <div id="Update">
-      Last Update: 30. August 2020
+      Last Update: 29. Oktober 2020
     </div>
   </footer>
 </body>
