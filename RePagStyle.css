@@ -140,11 +140,20 @@ footer {
     line-height: 1.8em;
     font-size: 1.2em;
     float: left;
+    width: 10em;
+  }
+
+  #SMedia ul {
+    list-style: none;
+    line-height: 1.8em;
+    font-size: 1.2em;
+    float: left;
   }
 
   #Repo a,
   #Feed a,
-  #Install a {
+  #Install a, 
+  #SMedia a {
     color: #6495ed;
   }
 
@@ -153,7 +162,9 @@ footer {
   #Feed a:focus,
   #Feed a:hover,
   #Install a:hover,
-  #Install a:focus {
+  #Install a:focus,
+  #SMedia a:hover,
+  #SMedia a:focus {
     color: gold;
     transition: all .25s ease-in;
   }
