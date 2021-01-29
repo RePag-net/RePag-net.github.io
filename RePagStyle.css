@@ -32,7 +32,7 @@ Banner {
   float: left;
   padding-top: 0.3em;
   text-shadow: 4px 4px 4px white, 4px -4px 4px white, -4px 4px 4px white, -4px -4px 4px white;
-  width: 20em; /*16em;*/
+  width: 16em; /*20em;*/
   text-align: center;
 }
 
@@ -135,7 +135,15 @@ footer {
     width: 10em;
   }
 
-  #Install ul {
+  #Install-32bit ul {
+    list-style: none;
+    line-height: 1.8em;
+    font-size: 1.2em;
+    float: left;
+    width: 10em;
+  }
+
+  #Install-64bit ul {
     list-style: none;
     line-height: 1.8em;
     font-size: 1.2em;
@@ -152,7 +160,8 @@ footer {
 
   #Repo a,
   #Feed a,
-  #Install a, 
+  #Install-32bit a,
+  #Install-64bit a,
   #SMedia a {
     color: #6495ed;
   }
@@ -161,8 +170,10 @@ footer {
   #Repo a:focus,
   #Feed a:focus,
   #Feed a:hover,
-  #Install a:hover,
-  #Install a:focus,
+  #Install-32bit a:hover,
+  #Install-32bit a:focus,
+  #Install-64bit a:hover,
+  #Install-64bit a:focus,
   #SMedia a:hover,
   #SMedia a:focus {
     color: gold;
