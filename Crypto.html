@@ -36,6 +36,10 @@
     </Text_n>
     <p>
       <Text_n>
+        Es werden immer 128bit-Blöcke verschlüsselt. Sollte der letzte Block weniger Nutzdaten enthalten, wird
+        auch ein voller 128bit-Block verschlüsselt. Zusätzlich wird die Original-Byteanzahl in einem Header hinterlegt.
+        Bei Encrypt wird die Originalanzahl am Parameter ulBytes übergeben und die erweiterte Byteanzahl zurück gegeben.
+        Bei Decrypt wird die erweiterte Anzahl am Parameter ulBytes übergeben und die Original-Byteanzahl zurück gegeben.
         Bei der Verwendung der Funktionen ist zu beachten das die AES Key-Arrays an einer 16bit Speichergrenze
         ausgerichtet werden müssen. Um Speicher auf dem Stack zu reservieren:
       </Text_n>
@@ -120,7 +124,7 @@
       </ul>
     </div>
     <div id="Update">
-      Last Update: 29. Januar 2021
+      Last Update: 31. Mai 2021
     </div>
   </footer>
 
