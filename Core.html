@@ -53,9 +53,8 @@
       <Text_n>
         Der Core verfügt über eine eigene Databaseseengine. Diese hat ein Wartungsmodul mit zwei Aufgaben.
         Den "Perfekten Ausgleich"(PA) der Binare-Search-Tree(BST) und die Startoptimierung(SO) der
-        Datenbankdateien. Letzteres ist vergleichbar mit dem Defragmentieren von Datenträger. Beim Start des
-        Cores durch den Service Manager erfolgt ein parallel Start der DB-Engine der zeitlich länger dauern
-        kann. Dies ist nur über den Task Manager nachvollziehbar. Die SO dient nur der Beschleunigung des
+        Datenbankdateien. Letzteres ist vergleichbar mit dem Defragmentieren von Datenträger.
+        Die SO dient nur der Beschleunigung des
         Startes der DB-Engine durch eine für den Start optimierte Anordnung der Daten in den DB-Dateien. Die
         SO selbst kann abhängig von Größe und Fragmentierung der DB-Dateien einige Minuten in Anspruch
         nehmen. Es empfiehlt sich den Vorgang manuell durchzuführen. Der PA der BSTs geht sehr schnell, da
@@ -113,6 +112,16 @@
         der Datenbankdateien und des Protokolls nicht abwärtskompatibel. Die Portnummer wurde von 5111 auf 5115 verlegt.
       </Text_n>
     </P>
+    <P>
+      <Text_n>
+        <strong>Hinweis:</strong> Jeder Core verfügt über sein eigenen Datenbankschlüssel, daher ist das kopieren von Datenbankdateien nicht möglich.
+        Jede Core zu Core Verbindung verfügt über ihren eigenen Schlüssel, der periodisch nach einer Zeit oder/und nach Anzahl von
+        Benutzungen getauscht wird. Der Core ist ein Viertel vom Ganzen einer Client/Server Architektur, in dessen Verbund seine
+        Aufgabe darin besteht, die anfallenden Daten zu verschlüsseln. Jeder Core versucht sich periodisch mit den Core
+        unter core.repag.net zu verbinden. Sollte ich den schalten, würden sich alle Cores die über das Internet erreichbar sind,
+        miteinander verbinden und Schlüssel tauschen. <strong>Mehr nicht!</strong>
+       </Text_n>
+    </P>
     <Text_n>
       <hr>
       File: Core.exe - Prozess Management / Version: 2.0.4.4 - Last Update: 18.01.2023
@@ -167,7 +176,7 @@
       </ul>
     </div>
     <div id="Update_Kurz">
-      Last Update: 18. Januar 2023
+      Last Update: 19. Januar 2023
     </div>
   </footer>
 </body>
