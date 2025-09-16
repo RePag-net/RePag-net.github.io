@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="RePag-Softwaredevelopment">
+  <meta name="author" content="Ren&eacute; Pagel">
+  <meta name="keywords" content="RePag, Softwareentwicklung, Softwaredevelopment, RePag-Software, RePag-Bibliotheken, RePag-Libraries">
+  <title>RePag - Framework</title>
+
+  <link href="RePagStyle.css" rel="stylesheet">
+
+  <style>
+    OA {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 2.3em;
+      float: left;
+      color: darkslategrey;
+      margin-top: 0.3em;
+      margin-left: 4em;
+      background-color: orange;
+      width: 12em;
+      height: 1.2em;
+      text-align: center;
+      transform: rotate(-1deg);
+    }
+  </style>
+
+</head>
+<body>
+  <header>
+    <Logo>RePag</Logo>
+    <Banner>Framework</Banner>
+    <!--<OA>coming soon 64bit</OA>-->
+    <!--<dev id="Bau">now 64bit too</dev>-->
+  </header>
+
+  <nav>
+    <div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Core.html">Core</a></li>
+        <li><a href="GUI.html">GUI</a></li>
+        <li><a href="Memory.html">Memory</a></li>
+        <li><a href="Crypto.html">Crypto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section>
+    <Text_n>
+      Seit 2002 entwickle ich ein Framework, das auch acht Jahre lang mit einem mehrplatzfähigem
+      Warenwirtschaftsprogramm getestet wurde. Das Framework ist ein geschlossenes System und teilt sich in drei Teile:
+      <ul>
+        <li>
+          Datendarstellung
+        </li>
+        <li>
+          Datenübertragung
+        </li>
+        <li>
+          Datenspeicherung
+        </li>
+      </ul>
+      Die Datendarstellung erfolgt mit der an dieser Stelle veröffentlichten
+      <A href="https://repag.net/GUI.html"> GUI</A>.<br>
+      Die Datenübertragung erfolgt über ein eigens entwickeltes Protokoll und teilt sich in einen:
+      <ul>
+        <li>
+          <A href="https://github.com/RePag-net/ProtocolClient"> Clientteil</A>
+        </li>
+        <li>
+          <A href="https://github.com/RePag-net/ProtocolServer"> Serverteil</A>
+        </li>
+      </ul>
+      Der Serverteil beinhaltet auch die Datenspeicherung und damit die Database-Engine.
+    </Text_n>
+    <p>
+      <Text_n>
+        Das Framework ist bei Gesamtbetrachtung in zehn Schichten aufgebaut. Die mittlere Schicht
+        fünf ist der abstrakte Teil des Protokolls und sowohl im Client als auch im Server enthalten.
+    </p>
+    <p>
+      <Text_n>
+        Bei getrennter Betrachtung von Client und Server besteht der Client aus fünf Schichten
+        und der Server aus sechs Schichten. Da die Transportschicht fünf abstrakt ist und sowohl im
+        Client als auch im Server vorhanden ist, wird sie im Client anders angesteuert als im Server.
+        Das geschieht in der Steuerungsschicht vier im Client und in Schicht sechs im Server.
+      </Text_n>
+    </p>
+    <p>
+      <Text_n>
+        Die Datenschicht drei im Client und die Schicht sieben im Server bereiten die Daten
+        für die Übertragung vor oder nehmen sie aus dem Transport zur Weiterverarbeitung entgegen.
+        Die Schicht zwei ist die spezifische Programmlogik, und die Schicht acht ist die spezifische
+        Datenbanklogik. Die Schicht eins ist die Benutzeroberfläche. Die Schicht neun ist der
+        abstrakte Teil der Database-Engine, und die Schicht zehn sind die Datenbankdateien.
+        Daraus resultiert:
+      </Text_n>
+    </p>
+    <p>
+      <Text_n>
+        Die Schichten vier, fünf, sechs und neun sind fertige Teile. Bei der Entwicklung eines Programms
+        sind die Schichten eins, zwei und drei auf der Clientseite sowie die Schichten sieben, acht und
+        zehn auf der Serverseite Programm spezifisch und müssen entwickelt werden. 
+      </Text_n>
+    </p>
+    <P>
+      <Text_n>
+        Die sicherheitskritische Client-Server-Architektur basiert auf einem verteilten System mit
+        eigenem Protokoll und AES-256-Bit-Verschlüsselung sowie integrierter Benutzerverwaltung und
+        Rechtesystem. Der Serverteil besteht aus drei Services:
+        <ul>
+          <Text_n>
+            <li>
+              <A href="https://github.com/RePag-net/AdminSc"> Admin-Server</A>
+            </li>
+            <li>
+              <A href="https://github.com/RePag-net/LoginSc"> Login-Server</A>
+            </li>
+            <li>
+              <A href="https://github.com/RePag-net/ServerSc"> Programm-Server </A>(Prototyp)
+            </li>
+          </Text_n>
+        </ul>
+        <Text_n>
+          Der Admin-Server ist zusammen mit dem Login-Server für die administrativen Aufgaben zuständig
+          sowie für die Fehlerprotokollierung.
+          Der Programm-Server ist für die Programm spezifischen Aufgaben zuständig.
+          Wer die Schicht dreiundsieb(zig) bei den Severn erkannt hat, hat den Aufbau verstanden.
+        </Text_n>
+    </P>
+    <P>
+      <Text_n>
+        <strong>Hinweis</strong>: Die Passwörter liegen zurzeit noch im Klartext in einer
+        verschlüsselten Datenbankdatei, die nur der Admin mit Sicherheitsstufe vier einsehen kann.
+        In Zukunft wird dies durch ein modernes PassKey-Verfahren ersetzt. Im Zuge
+        dieser Änderungen wird die gesamte Login-Prozedur überarbeitet und DSGVO-konform gestaltet.
+        Das wird dazu führen, dass die neue Login-Prozedur nicht abwärtskompatibel sein wird.
+      </Text_n>
+    </P>
+    <P>
+      <Text_n>
+        Das Project <A href="https://github.com/RePag-net/DBDateien"> DBDateien</A>
+        erstellt die notwendigen Datenbankdateien (Schicht zehn) auf der Serverseite.
+      </Text_n>
+    </P>
+    <Text_n>
+      <strong>Hinweis</strong>: Die Binär-Search-Trees existieren unabhängig von den sortierten Listen.
+      Daher entsteht hier keine Treppenstruktur, sondern eine perfekt ausgeglichene Glockenkurve.
+      (siehe dazu auch <a href="https://repag.net/Core.html">PA und SO</a>.)
+      Es gibt jedoch einen Zusammenhang: Die BSTs befinden sich im Cache
+      und greifen auf die sortierten Spalten der Tabellen zu, welche sich ebenfalls im Cache
+      befinden. Daraus folgt: Ein BST kann immer nur auf einer sortierten Spalte aufsetzen.
+      Die sortierten Spalten werden von links nach rechts bzw. von oben nach unten
+      (siehe ODLGDBDateien.cpp) angeordnet.
+      Das gilt es bei der Planung der Datenbanktabellen zu beachten.
+    </Text_n>
+    </P>
+    <Text_n>
+      ...und hier sind noch die <A href="https://github.com/RePag-net/Include"> Include</A>-Files.
+    </Text_n>
+    </P>
+    <P>
+      <Text_n>
+        Entschuldigung das ich nicht das ganze Framework erkläre, aber dann wäre das keine
+        Webseite mehr, sondern wohl eher ein Buchprojekt.
+      </Text_n>
+    </P>
+  </section>
+
+  <footer>
+    <div id="Repo">
+      <ul>
+        <li>Repository</li>
+        <li><a href="https://github.com/RePag-net">GitHub</a></li>
+      </ul>
+    </div>
+    <div id="Feed">
+      <ul>
+        <li>Package</li>
+        <li><a href="https://www.nuget.org/packages?q=RePag.">NuGet</a></li>
+      </ul>
+    </div>
+    <div id="Install-32bit">
+      <ul>
+        <li>Install 32bit</li>
+        <li><a href="https://repag.net/Install/RePagCore32.msi">Core</a></li>
+      </ul>
+    </div>
+    <div id="Install-64bit">
+      <ul>
+        <li>Install 64bit</li>
+        <li><a href="https://repag.net/Install/RePagCore64.msi">Core</a></li>
+      </ul>
+    </div>
+    <div id="SMedia">
+      <ul>
+        <li>Sozial Media</li>
+        <li><a href="https://www.linkedin.com/in/ren%C3%A9-pagel-repag/">LinkedIn</a></li>
+      </ul>
+    </div>
+    <div id="Update_Lang">
+      Last Update: 16. September 2025
+    </div>
+  </footer>
+</body>
+</html>

@@ -14,7 +14,7 @@
   <header>
     <Logo>RePag</Logo>
     <Banner>Graphic User Interface</Banner>
-    <!--<dev id="Bau">now 64bit too</dev>-->
+    <!--<dev id="Bau">now 64bit too</dev>&gt;-->
   </header>
 
   <nav>
@@ -22,8 +22,9 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="Core.html">Core</a></li>
-        <li><a href="https://repag.net/Memory.html">Memory</a></li>
+        <li><a href="Memory.html">Memory</a></li>
         <li><a href="Crypto.html">Crypto</a></li>
+        <li><a href="Framework.html">Framework</a></li>
       </ul>
     </div>
   </nav>
@@ -31,43 +32,44 @@
   <section>
     <Text_n>
       Das <a href="https://github.com/RePag-net/Graphic-User-Interface">Graphic-User-Interface</a>
-      ist ein Open-Source-Project. Es enthält die wichtigsten Benutzeroberflächenelemente womit
-      eine einfache Benutzeroberfläche aufgebaut werden kann.
+      ist ein Open-Source-Projekt. Es enthält die wichtigsten Benutzeroberflächenelemente,
+      mit denen eine einfache Benutzeroberfläche aufgebaut werden kann.
     </Text_n>
-    <p>
-    </p>
     <P>
       <Text_n>
-        Der ulZeilen_Blatt Parameter bei COTabelle stellt ein internen "Zeilen pro Blatt" Wert da. Die Anzahl der
-        Blätter ist unbegrenzt. Stell dir vor du wärst der Computer. Wie hättest du es gerne? Viele Zeilen auf
-        wenigen Blättern oder wenige Zeilen auf vielen Blättern oder alle Zeilen auf einen Blatt? Im Zweifelsfalle
-        frag den Computer.
+        Der Parameter ulZeilen_Blatt bei COTabelle stellt einen internen „Zeilen-pro-Blatt“-Wert dar.
+        Die Anzahl der Blätter ist unbegrenzt. Stell dir vor, du wärst der Computer. Wie hättest du es gerne?
+        Viele Zeilen auf wenigen Blättern, wenige Zeilen auf vielen Blättern oder alle Zeilen auf einem Blatt?
+        Im Zweifelsfall frag den Computer.
       </Text_n>
     </P>
     <P>
       <Text_n>
-        Da bei Mediadateien sehr große Datenmengen auftreten können wurde bewusst, wo möglich, auf eine
+        Da bei Mediendateien sehr große Datenmengen auftreten können, wurde bewusst, wo möglich, auf eine
         Verarbeitung im Arbeitsspeicher verzichtet. Stattdessen erfolgt die Verarbeitung über die Festplatte.
-        Bei Mediadateien die sich in Tabellen befinden werden jedoch vollständig in den Arbeitsspeicher
-        geladen. Bei erreichen der physikalischen Speichergrenze wir das Exception EX_VM_KEINSPEICHER
-        ausgelöst.
+        Mediendateien, die sich in Tabellen befinden, werden jedoch vollständig in den Arbeitsspeicher geladen.
+        Bei Erreichen der physikalischen Speichergrenze wird die Exception EX_VM_KEINSPEICHER ausgelöst.
       </Text_n>
     </P>
     <P>
       <Text_n>
-        Alle Benutzerelemente und Dialog ab der Version 3.2 sind threadsicher. Jeder Dialog verfügt jetzt über
+        Alle Benutzerelemente und Dialoge ab der Version 3.2 sind threadsicher. Jeder Dialog verfügt jetzt über
         eine eigene Messageschleife. Damit bleiben auch nichtmodale Dialoge bei der Funktion
-        pDialog-&gt;SetzSichtbar(true) stehen. Mit der Message WM_COMMAND und
-        wParam=IDE_DLG_SICHTBAR kann letztmalig hinter dieser Funktion Code ausgeführt werden oder
-        erstmalig nach der Funktion pDialog-&gt;SetzSichtbar(true). Je nach Sichtweise. Diese Stelle ist auch die
-        Empfehlenswerte für die Verwendung der Funktion Effekt_Timer() die im Gegensatz dazu im
-        Konstruktor ungünstig platziert ist. Die Funktionen pDialog-&gt;ErstellFenster() und
-        pDialog-&gt;SetzSichtbar(true) müssen im gleichen Thread ausgeführt werden, oder
-        pDialog-&gt;ErstellFenster() in einem nicht beendeten Thread zum Beispiel dem Hauptthread und
-        pDialog-&gt;SetzSichtbar(true) in einem beliebig anderen Thread. Um ein "Deadlock" zu verhindern
-        werden alle WM_COMMAND Messages in den Klassen CODialog und COGrafikGruppe in
-        eigenständigen Threads ausgeführt. Somit kann die Funktion pDialog-&gt;SetzSichtbar(true) in einer
-        WM_COMMAND Message problemlos verwendet werden.
+        pDialog->SetzSichtbar(true) stehen. Mit der Message WM_COMMAND und wParam=IDE_DLG_SICHTBAR kann letztmalig
+        hinter dieser Funktion Code ausgeführt werden oder erstmalig nach der Funktion<br>
+        pDialog->SetzSichtbar(true) – je nach Sichtweise. Diese Stelle ist auch die empfehlenswerte für die
+        Verwendung der Funktion Effekt_Timer(), die im Gegensatz dazu im Konstruktor ungünstig platziert ist.
+        Die Funktionen pDialog->ErstellFenster() und pDialog->SetzSichtbar(true) müssen im gleichen Thread ausgeführt
+        werden, oder pDialog->ErstellFenster() in einem nicht beendeten Thread, zum Beispiel dem Hauptthread,
+        und pDialog->SetzSichtbar(true) in einem beliebigen anderen Thread. Um ein „Deadlock“ zu verhindern,
+        werden alle WM_COMMAND-Messages in den Klassen CODialog und COGrafikGruppe in eigenständigen Threads
+        ausgeführt. Somit kann die Funktion pDialog->SetzSichtbar(true) in einer WM_COMMAND-Message problemlos verwendet werden.
+      </Text_n>
+    </P>
+    <P>
+      <Text_n>
+        Das Projekt <a href="https://github.com/RePag-net/ProgDlgDX">ProgDlgDX</a>
+        ist der Beginn einer Entwicklung für eine neue Benutzeroberfläche auf der Basis von DirectX.
       </Text_n>
     </P>
     <Text_n>
@@ -117,21 +119,7 @@
         Package: RePag.Dialogs.Developer / Version: 1.4.7 - Last Update: 07.08.2025
       </P>
       <hr>
-      Zusätzliche Dateien
-      <P>
-        File: Menu.h - Last Update: 30.08.2020 </br>
-        File: Fieldsizes.h - Last Update: 30.08.2020
-      </P>
-      <P>
-        Package: RePag.GUI / Version: 3.25.7 - Last Update: 07.08.2025
-      </P>
-      <hr>
-      Quellcode aus dem Demoprogramm das den Grundaufbau eines RePag-Programms zeigt. Achtung! Vor dem installieren des Demoprogramms
-      muss der Core installiert werden.
-      <P>
-        <A href="https://repag.net/source/ODLGDemo.cpp"> CPP-Datei</A> - Last Update: 02.10.2020 /
-        <A href="https://repag.net/source/ODLGDemo.h"> H-Datei</A> - Last Update: 02.10.2020
-      </P>
+      File: ProgDlgDX.dll - Programm und Dialogelemente DirectX / Version: 0.8.0.1 - Last Update: 16.09.2025
     </Text_n>
   </section>
 
@@ -152,14 +140,12 @@
       <ul>
         <li>Install 32bit</li>
         <li><a href="https://repag.net/Install/RePagCore32.msi">Core</a></li>
-        <li><a href="https://repag.net/Install/RePagDemo32.msi">Demo</a></li>
       </ul>
     </div>
     <div id="Install-64bit">
       <ul>
         <li>Install 64bit</li>
         <li><a href="https://repag.net/Install/RePagCore64.msi">Core</a></li>
-        <li><a href="https://repag.net/Install/RePagDemo64.msi">Demo</a></li>
       </ul>
     </div>
     <div id="SMedia">
@@ -168,8 +154,8 @@
         <li><a href="https://www.linkedin.com/in/ren%C3%A9-pagel-repag/">LinkedIn</a></li>
       </ul>
     </div>
-    <div id="Update_Kurz">
-      Last Update: 7. August 2024
+    <div id="Update_Lang">
+      Last Update: 16. September 2025
     </div>
   </footer>
 </body>

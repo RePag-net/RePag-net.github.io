@@ -23,47 +23,62 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="Core.html">Core</a></li>
         <li><a href="GUI.html">GUI</a></li>
-        <li><a href="https://repag.net/Memory.html">Memory</a></li>
+        <li><a href="Memory.html">Memory</a></li>
+        <li><a href="Framework.html">Framework</a></li>
       </ul>
     </div>
   </nav>
 
   <section>
     <Text_n>
-      Das <a href="https://github.com/RePag/AES-CBC-256bit">Cryptography-Project</a> ist ein Open-Source-Project.
-      Die Verschlüsselung erfolgt nach dem Advanced Encryption Standard (AES). Die Schlüssellänge beträgt
-      256bit. Es kommt zusätzlich die Betriebsart Cipher Block Chaining zur Anwendung.
+      Das <a href="https://github.com/RePag-net/AES-CBC-256bit">Cryptography-Project</a> ist ein Open-Source-Project.
+      Die Verschlüsselung erfolgt nach dem Advanced Encryption Standard (AES). Die Schlüssellänge beträgt 256 Bit.
+      Es kommt zusätzlich die Betriebsart Cipher Block Chaining (CBC) zur Anwendung.
     </Text_n>
     <p>
       <Text_n>
         Es werden immer 128bit-Blöcke verschlüsselt. Sollte der letzte Block weniger Nutzdaten enthalten, wird
-        auch ein voller 128bit-Block verschlüsselt. Zusätzlich wird die Original-Byteanzahl in einem Header hinterlegt.
-        Bei Encrypt wird die Originalanzahl am Parameter ulBytes übergeben und die erweiterte Byteanzahl zurück gegeben.
-        Bei Decrypt wird die erweiterte Anzahl am Parameter ulBytes übergeben und die Original-Byteanzahl zurück gegeben.
-        Bei der Verwendung der Funktionen ist zu beachten das die AES Key-Arrays an einer 16bit Speichergrenze
-        ausgerichtet werden müssen. Um Speicher auf dem Stack zu reservieren:
+        auch ein voller 128bit-Block verschlüsselt. Zusätzlich wird die ursprüngliche Byteanzahl in einem Header hinterlegt.
+
       </Text_n>
-      <ul>
-        <li>
-          <Text_n>
-            alignas(16) unsigned char auc256DecryptKey[256]; alignas(16) unsigned char auc240EncryptKey[240];
-          </Text_n>
-        </li>
-      </ul>
+    </p>
+    <p>
       <Text_n>
-        oder um Speicher auf dem Heap anzufordern
+        Bei Encrypt wird die Originalanzahl über den Parameter ulBytes übergeben und die erweiterte Byteanzahl zurückgegeben.
+        Bei Decrypt wird die erweiterte Anzahl über den Parameter ulBytes übergeben und die ursprüngliche Byteanzahl zurückgegeben.
       </Text_n>
-      <ul>
-        <li>
-          <Text_n>
-            VMBLOCK vb256DecryptKey = VMBlockA(256, 16); VMBLOCK vb240EncryptKey = VMBlockA(240, 16);
-          </Text_n>
-        </li>
-      </ul>
+    </p>
+    <p>
       <Text_n>
-        Wer ganz sicher gehen will sollte am Ende seiner Funktion den Speicher mit Nullen überschreiben.<br>
+        Bei der Verwendung der Funktionen ist zu beachten dass die AES-Key-Arrays an einer 16-Bit-Speichergrenze ausgerichtet werden müssen.
+        Um Speicher auf dem Stack zu reservieren:
+      </Text_n>
+    </p>
+    <ul>
+      <li>
+        <Text_n>
+          alignas(16) unsigned char auc256DecryptKey[256]; alignas(16) unsigned char auc240EncryptKey[240];
+        </Text_n>
+      </li>
+    </ul>
+    <Text_n>
+      oder um Speicher auf dem Heap anzufordern
+    </Text_n>
+    <ul>
+      <li>
+        <Text_n>
+          VMBLOCK vb256DecryptKey = VMBlockA(256, 16); VMBLOCK vb240EncryptKey = VMBlockA(240, 16);
+        </Text_n>
+      </li>
+    </ul>
+    <Text_n>
+      Wer ganz sicher gehen will, sollte am Ende der Funktion den Speicher mit Nullen überschreiben.<br>
+    </Text_n>
+    <p>
+      <Text_n>
         Für den Stack mit
       </Text_n>
+    </p>
       <ul>
         <li>
           <Text_n>
@@ -104,14 +119,12 @@
       <ul>
         <li>Install 32bit</li>
         <li><a href="https://repag.net/Install/RePagCore32.msi">Core</a></li>
-        <li><a href="https://repag.net/Install/RePagDemo32.msi">Demo</a></li>
       </ul>
     </div>
     <div id="Install-64bit">
       <ul>
         <li>Install 64bit</li>
         <li><a href="https://repag.net/Install/RePagCore64.msi">Core</a></li>
-        <li><a href="https://repag.net/Install/RePagDemo64.msi">Demo</a></li>
       </ul>
     </div>
     <div id="SMedia">
@@ -120,8 +133,8 @@
         <li><a href="https://www.linkedin.com/in/ren%C3%A9-pagel-repag/">LinkedIn</a></li>
       </ul>
     </div>
-    <div id="Update_Kurz">
-      Last Update: 18. Januar 2023
+    <div id="Update_Lang">
+      Last Update: 16. September 2025
     </div>
   </footer>
 

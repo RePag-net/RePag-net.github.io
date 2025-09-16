@@ -14,7 +14,7 @@
   <header>
     <Logo>RePag</Logo>
     <Banner>Core</Banner>
-    <!--<dev id="Bau">now 64bit too</dev>-->
+    <!--<dev id="Bau">coming soon Framework</dev>-->
   </header>
 
   <nav>
@@ -22,8 +22,9 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="GUI.html">GUI</a></li>
-        <li><a href="https://repag.net/Memory.html">Memory</a></li>
+        <li><a href="Memory.html">Memory</a></li>
         <li><a href="Crypto.html">Crypto</a></li>
+        <li><a href="Framework.html">Framework</a></li>
       </ul>
     </div>
   </nav>
@@ -31,55 +32,46 @@
   <section>
     <Text_n>
       Das Core-Programm ist ein proprietäres Project. Es stellt ein Prozessmanagement für bis zu achtzehn Prozesse
-      zur Verfügung. Um die Geschlossenheit und Unabhängigkeit zu gewährleisten benötigt der Core keine weiteren Dateien.
+      zur Verfügung. Um die Geschlossenheit und Unabhängigkeit zu gewährleisten, benötigt der Core keine weiteren Dateien.
       Die ComSys.dll ist das kommunizierende Gegenstück auf der Seite des jeweiligen Prozesses. Diese Datei
-      benötigt noch einige Teile aus der ADT.DLL. Somit werden diese beiden Dateien auf der Seite des
+      benötigt noch einige Teile aus der ADT.dll. Somit werden diese beiden Dateien auf der Seite des
       jeweiligen Prozesses benötigt. Beim Start eines Prozesses wird automatisch eine Verbindung zum Core hergestellt.
-      Für alle verbundenen Prozesse besteht die Möglichkeit mit der Klasse COVMBlockShared gemeinsam auf den
-      gleichen Memorybereich zuzugreifen. Des weiteren hat der Core sein eigenes Memorymanagement sowie sein
-      eigenen Certificatestore und ein Keymanagement für AES256bit-Schlüssel. Der Quellcode des Programms
-      Core.exe und die Library CompSys.dll werden aus Sicherheitsgründen nur zum Teil veröffentlicht. So zum Beispiel
-      das <a href="https://repag.net/Memory.html">Memorymanagement</a>
+      Für alle verbundenen Prozesse besteht die Möglichkeit, mit der Klasse COVMBlockShared gemeinsam auf den
+      gleichen Memorybereich zuzugreifen. Des Weiteren hat der Core sein eigenes Memorymanagement sowie sein
+      eigenen Certificatestore und ein Key-Management für AES-256-bit-Schlüssel. Der Quellcode des Programms
+      Core.exe und der Library CompSys.dll wird aus Sicherheitsgründen nur teilweise veröffentlicht,
+      so zum Beispiel das <a href="https://repag.net/Memory.html">Memorymanagement</a>
       und die <a href="Crypto.html">Cryptography</a>.
     </Text_n>
     <p>
       <Text_n>
-        Mein Prinzip der AES256bit Cryptography ist die Teilung von Schlüsselmanagement im Core und dem
-        Codieralgorythmus beim jeweiligem Prozess. Die Schlüssel können von Core zu Core übertragen werden.
-        Dies stellt dann auch die Datensicherung da, die ansonsten nicht weiter vorgesehen ist.
+        Mein Prinzip der AES-256-bit-Cryptography ist die Trennung von Schlüsselmanagement im Core und dem
+        Codieralgorythmus im jeweiligen Prozess. Die Schlüssel können von Core zu Core übertragen werden.
+        Dies stellt dann auch die Datensicherung dar, die ansonsten nicht weiter vorgesehen ist.
       </Text_n>
     </p>
     <P>
       <Text_n>
-        Der Core verfügt über eine eigene Databaseseengine. Diese hat ein Wartungsmodul mit zwei Aufgaben.
-        Den "Perfekten Ausgleich"(PA) der Binare-Search-Tree(BST) und die Startoptimierung(SO) der
-        Datenbankdateien. Letzteres ist vergleichbar mit dem Defragmentieren von Datenträger.
-        Die SO dient nur der Beschleunigung des
-        Startes der DB-Engine durch eine für den Start optimierte Anordnung der Daten in den DB-Dateien. Die
-        SO selbst kann abhängig von Größe und Fragmentierung der DB-Dateien einige Minuten in Anspruch
-        nehmen. Es empfiehlt sich den Vorgang manuell durchzuführen. Der PA der BSTs geht sehr schnell, da
-        die BSTs sich im Cache der DB-Engine befinden und dabei nur "Zeiger umgehangen" und keine Daten
-        verschoben werden. Der PA wird auch bei jedem Start des Cores ausgeführt. Diese beiden Aufgaben
-        können auch automatisch zu einer vorgegeben Zeit ausgeführt werden, wenn beispielsweise der Core
-        im 24/7 Betrieb läuft.
+        Der Core verfügt über eine eigene Databaseseengine. Diese hat ein Wartungsmodul mit zwei Aufgaben:
+        Den „Perfekten Ausgleich“ (PA) des Binary-Search-Trees (BST) und die Startoptimierung (SO) der
+        Datenbankdateien. Letzteres ist vergleichbar mit dem Defragmentieren von Datenträgern.
+        Die SO dient nur der Beschleunigung des Starts der DB-Engine durch eine für den Start optimierte
+        Anordnung der Daten in den DB-Dateien. Es empfiehlt sich, den Vorgang manuell durchzuführen.
+        Bei den heutigen Rechenkapazitäten ist das erst ab 1 Millionen Datensätze sinnvoll.
+        Der PA der BSTs geht sehr schnell, da die BSTs sich im Cache der DB-Engine befinden und dabei
+        nur "Zeiger umgehängt" und keine Daten verschoben werden. Der PA wird auch bei jedem Start
+        des Cores ausgeführt. Diese beiden Aufgaben können auch automatisch zu einer vorgegebenen Zeit
+        ausgeführt werden, wenn beispielsweise der Core im 24/7-Betrieb läuft.
       </Text_n>
     </P>
-    <P>
-      <Text_n>
-        Über den Port 5111 kommunizieren die Cores untereinander. Der Verbindungsaufbau zu IPV6-Adressen
-        wird bevorzugt hergestellt und ist mindestens 10 sek. schneller pro Verbindung.
-        Die Standard Waittime zwischen Core zu Core Verbindungen beträgt 10 sek. und zwischen
-        Prozess zu Core 10 sek. bevor der Vorgang abgebrochen wird.
-      </Text_n>
-    <p>
-      <Text_n>
-        Zur Installation des Cores startet man die Eingabeaufforderung (DOS-Prompt) als Administrator.
-        Wechselt in das Verzeichnis in der sich die Datei Core.exe befindet und gibt core -install ein.
-        Weitere Optionen können durch Eingabe von core -h angezeigt werden. Alternativ kann man komfortabel
-        über den Windows-Installer durch Verwendung der <a href="https://repag.net/Install/RePagCore32.msi">RePagCore32.msi</a>
-        oder <a href="https://repag.net/Install/RePagCore64.msi">RePagCore64.msi</a> Datei eine komplette Installation
-        durchführen. Die Windows-Installer Variante ist auch die empfohlene Variante.
-      </Text_n>
+    <Text_n>
+      Zur Installation des Cores startet man die Eingabeaufforderung (DOS-Prompt) als Administrator.
+      Man wechselt in das Verzeichnis, in dem sich die Datei Core.exe befindet und gibt core -install ein.
+      Weitere Optionen können durch Eingabe von core -h angezeigt werden. Alternativ kann man komfortabel
+      über den Windows-Installer mit der Datei <a href="https://repag.net/Install/RePagCore32.msi">RePagCore32.msi</a>
+      oder <a href="https://repag.net/Install/RePagCore64.msi">RePagCore64.msi</a> eine komplette Installation
+      durchführen. Die Windows-Installer Variante ist auch die empfohlene Variante.
+    </Text_n>
     </p>
     <P>
       <Text_n>
@@ -90,40 +82,40 @@
       <Text_n>
         Das <a href="https://github.com/RePag-net/Abstract-Data-Types">Abstract-Data-Types</a>
         Project ist ein Open-Source-Project.
-        Bei den Funktionen FLOATzuCHAR() und DOUBLEzuCHAR() wird nur in der Darstellung gerundet. Der
-        interne Wert bleibt unverändert. Bei Angabe von 8-Stellen bei FLOATzuCHAR() und bei der Angabe von
-        16-Stellen bei DOUBLEzuCHAR() wird nicht gerundet. Stattdessen wird der echte Wert dargestellt mit
-        dem der Prozessor in Wahrheit intern rechnet. Für eine 100% Genauigkeit, wie sie beispielsweise in der
+        Bei den Funktionen FLOATzuCHAR() und DOUBLEzuCHAR() wird nur in der Darstellung gerundet.
+        Der interne Wert bleibt unverändert. Bei Angabe von 8 Stellen bei FLOATzuCHAR() und bei Angabe
+        von 16 Stellen bei DOUBLEzuCHAR() wird nicht gerundet. Stattdessen wird der echte Wert dargestellt,
+        mit dem der Prozessor intern rechnet. Für eine 100%ige Genauigkeit, wie sie beispielsweise in der
         Finanzwirtschaft gefordert wird, empfehle ich die Verwendung von COComma4 und COComma4_80.
-        Bei diesen beiden Datentypen wird nach kaufmännischen Runden entsprechend der DIN-Norm 1333
-        gerundet.
+        Bei diesen beiden Datentypen wird nach kaufmännischem Runden entsprechend der DIN-Norm 1333 gerundet.
       </Text_n>
     </P>
     <P>
       <Text_n>
-        Zusätzlich wir noch die Datei FileVers.dll auf der Prozess-Seite benötigt. Die einzige Aufgabe dieser Datei
-        besteht darin, die jeweilige Dateiversion aller im Programm verwendeten RePag-DLL-Dateien zur Programmversion
-        zusammen zu halten. Es ist daher später nicht möglich beim User eine RePag-DLL-Datei mit dem gleichen Dateinamen
-        einer anderen Dateiversion zu tauschen. Ein offizielles Update ist weiterhin möglich.
+        Zusätzlich wird auf der Prozess-Seite noch die Datei FileVers.dll benötigt. Die einzige Aufgabe dieser Datei
+        besteht darin, die jeweilige Dateiversion aller im Programm verwendeten RePag-DLL-Dateien mit der Programmversion
+        abzugleichen. Es ist daher später nicht möglich, beim User eine RePag-DLL-Datei mit gleichem Dateinamen,
+        aber anderer Version, auszutauschen. Ein offizielles Update ist weiterhin möglich.
       </Text_n>
     </P>
     <P>
       <Text_n>
         Aufgrund der umfangreichen Änderungen am Cryptho-Algorithmus ist der Core ab Version 2.0.4.1 im Bereich
-        der Datenbankdateien und des Protokolls nicht abwärtskompatibel. Die Portnummer wurde von 5111 auf 5115 verlegt.
+        der Datenbankdateien und des Protokolls nicht abwärtskompatibel. Die Portnummer wurde von 5111 auf 5115 geändert.
         Zur Verbesserung der Sicherheit wurde noch einmal eine Änderung am Protokoll vorgenommen, die dazu führt, dass der
         Core ab Version 2.0.4.6 nicht abwärtskompatibel ist. Der Cryptho-Algorithmus und die Datenbankdateien bleiben unverändert.
       </Text_n>
     </P>
     <P>
       <Text_n>
-        <strong>Hinweis:</strong> Jeder Core verfügt über sein eigenen Datenbankschlüssel, daher ist das kopieren von Datenbankdateien nicht möglich.
-        Jede Core zu Core Verbindung verfügt über ihren eigenen Schlüssel, der periodisch nach einer Zeit oder/und nach Anzahl von
-        Benutzungen getauscht wird. Der Core ist ein Viertel vom Ganzen einer Client/Server Architektur, in dessen Verbund seine
-        Aufgabe darin besteht, die anfallenden Daten zu verschlüsseln. Jeder Core versucht sich periodisch mit den Core
-        unter core.repag.net zu verbinden. Sollte ich den schalten, würden sich alle Cores die über das Internet erreichbar sind,
-        miteinander verbinden und Schlüssel tauschen. <strong>Mehr nicht!</strong>
-       </Text_n>
+        <strong>Hinweis:</strong> Jeder Core verfügt über seinen eigenen Datenbankschlüssel, daher ist das Kopieren von
+        Datenbankdateien nicht möglich. Jede Core-zu-Core-Verbindung verfügt über ihren eigenen Schlüssel,
+        der periodisch nach einer bestimmten Zeit oder nach einer festgelegten Anzahl von Benutzungen getauscht wird.
+        Der Core ist ein Viertel des Ganzen einer Client/Server-Architektur, in deren Verbund seine Aufgabe darin besteht,
+        die anfallenden Daten zu verschlüsseln. Jeder Core versucht sich periodisch mit dem Core unter core.repag.net zu verbinden.
+        Sollte ich diesen schalten, würden sich alle Cores, die über das Internet erreichbar sind, miteinander verbinden
+        und Schlüssel tauschen.<br> ...und IP-Listen nach dem Motto "Kennste den schon? "<strong>Mehr nicht!</strong>
+      </Text_n>
     </P>
     <Text_n>
       <hr>
@@ -169,14 +161,12 @@
       <ul>
         <li>Install 32bit</li>
         <li><a href="https://repag.net/Install/RePagCore32.msi">Core</a></li>
-        <li><a href="https://repag.net/Install/RePagDemo32.msi">Demo</a></li>
       </ul>
     </div>
     <div id="Install-64bit">
       <ul>
         <li>Install 64bit</li>
         <li><a href="https://repag.net/Install/RePagCore64.msi">Core</a></li>
-        <li><a href="https://repag.net/Install/RePagDemo64.msi">Demo</a></li>
       </ul>
     </div>
     <div id="SMedia">
@@ -185,8 +175,8 @@
         <li><a href="https://www.linkedin.com/in/ren%C3%A9-pagel-repag/">LinkedIn</a></li>
       </ul>
     </div>
-    <div id="Update_Kurz">
-      Last Update: 7. August 2025
+    <div id="Update_Lang">
+      Last Update: 16. September 2025
     </div>
   </footer>
 </body>
